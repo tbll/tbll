@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html amp lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>Best Bars in taipei: WA-SHU
+和酒</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!-- See: -->
+    <!-- https://www.ampproject.org/docs/tutorials/create/basic_markup -->
+    <!-- http://schema.org/Review -->
+    <!-- https://www.ampproject.org/docs/guides/discovery -->
+    <!-- <link rel="canonical" href="https://thebootleggerslist.com/taipei/washu.html"> -->
+    <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+    <!-- <script type="application/ld+json"> -->
+    <!--   { -->
+    <!--   } -->
+    <!-- </script> -->
+    <!-- <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript> -->
+
+    <style>
+      @font-face {
+        font-family: cambria;
+        src: url("../assets/fonts/cambria-regular.ttf");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1em;
+      }
+
+      a, a:visited  {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      body {
+        background-color: rgb(20,24,29);
+        color: #F4F2EE;
+        margin: 10px;
+      }
+
+      footer {
+        margin: 20vw 0;
+        text-align: center;
+      }
+
+      .top {
+        display: block;
+        position: fixed;
+        width: 100%;
+        line-height: 3em;
+        background-image: linear-gradient(to bottom, rgb(20,24,29), transparent);
+        background-position: center top;
+        margin: 0 -10px;
+      }
+
+      .top:before {
+        content: "\f053";
+        font-family: fas;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        padding: 0 1em;
+        font-size: 1.5em;
+      }
+
+      .cover {
+        margin: -10px -10px 0 -10px;
+        width: 100vw;
+        height: 70vw;
+        background-image:
+          linear-gradient(to bottom, transparent, rgb(20,24,29)),
+          url(/imgs/washu-0-desktop-2x.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom, center top;
+        background-size: 100% 100vw, cover;
+      }
+
+      .intro {
+        width: 100%;
+        margin-top: -30vw;
+        text-align: center;
+        padding: 1em 0;
+        padding: 10px;
+      }
+
+      .logo {
+        float: right;
+        width: 80px;
+        margin: 0 20px 20px 20px;
+        border-radius: 2px;
+        border: 2px solid #F4F2EE;
+      }
+
+      .name {
+        font-family: cambria;
+        font-size: 2em;
+        white-space: pre;
+        margin: 0;
+      }
+
+      .top10 {
+        margin: 1em 0;
+        font-size: 1.7em;
+      }
+
+      .city {
+        text-transform: capitalize;
+      }
+
+      .summary:before {content: "“"}
+      .summary:after {content: "”"}
+
+      .button {
+        display: inline;
+      }
+
+      .button > a {
+        padding: 0.5em 1em 0.5em 0;
+        margin: 0.5em 0;
+        display: inline-block;
+        white-space: pre;
+        background-color: rgb(30,36,42);
+        border-radius: 6px;
+        border: 1px solid rgb(48,57,63);
+      }
+
+      .button > a:before {
+        display: inline-block;
+        width: 2em;
+        text-align: center;
+      }
+
+      .wwwbutton > a:before {
+        font-family: fab;
+        content: "\f39e";
+      }
+
+      .mapbutton > a:before {
+        font-family: far;
+        content: "\f279";
+      }
+
+      .hoursbutton > a:before {
+        content: "\f017";
+        font-family: far;
+      }
+
+      .hours > dt, .hours > dd {
+        opacity: 0.5;
+      }
+      .hours > dt {
+        display: inline-block;
+        min-width: 40vw;
+      }
+      .hours > dd {
+        display: inline-block;
+      }
+
+      .hours > .today, .hours > .today {
+        opacity: 1;
+      }
+
+      .hours {
+        margin: 10px;
+      }
+
+      .hours.hidden {
+        display: none;
+      }
+
+      .images {
+        height: 20vw;
+        margin: 20px -10px;
+      }
+
+      .tb {
+        display: inline-block;
+        text-size: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 20vw;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+      }
+      .tb:last-child {
+        border-right: none;
+      }
+      #tb0 { background-image: url(/imgs/washu-0-tb-1x.jpg); }
+      #tb1 { background-image: url(/imgs/washu-1-tb-1x.jpg); }
+      #tb2 { background-image: url(/imgs/washu-2-tb-1x.jpg); }
+      #tb3 { background-image: url(/imgs/washu-3-tb-1x.jpg); }
+      #tb4 { background-image: url(/imgs/washu-4-tb-1x.jpg); }
+
+    </style>
+  </head>
+  <body>
+    <a href="/taipei/" class="top"></a>
+    <div class="cover">
+    </div>
+    <div class="intro">
+      <h1 class="name">WA-SHU
+和酒</h1>
+      <p class="top10">TOP 10</p>
+      <p class="selection">Bootleggers' Selection 2018, <span class="city">taipei</span>.</p>
+      <p class="summary">The most creative bar in town.</p>
+    </div>
+    <div>
+      <p class="button mapbutton"><a href="https://maps.google.com/?cid=7103839651062047976" target="_blank">Map &amp; address</a></p>
+      <p class="button wwwbutton"><a href="http://www.wa-shu.com/" target="_blank">Facebook</a></p>
+      <p class="button hoursbutton"><a href="#" onclick="document.querySelector('.hours').classList.toggle('hidden'); return false;">Hours</a></p>
+      <dl class="hours hidden">
+        <dt>Monday</dt><dd>8:00 PM – 2:00 AM</dd>
+        <dt>Tuesday</dt><dd>8:00 PM – 2:00 AM</dd>
+        <dt>Wednesday</dt><dd>8:00 PM – 2:00 AM</dd>
+        <dt>Thursday</dt><dd>8:00 PM – 2:00 AM</dd>
+        <dt>Friday</dt><dd>8:00 PM – 3:00 AM</dd>
+        <dt>Saturday</dt><dd>8:00 PM – 3:00 AM</dd>
+        <dt>Sunday</dt><dd>8:00 PM – 2:00 AM</dd>
+      </dl>
+    </div>
+    <div class="images">
+      <div id="tb1" class="tb"></div><div id="tb2" class="tb"></div><div id="tb3" class="tb"></div><div id="tb4" class="tb"></div><div id="tb0" class="tb"></div>
+    </div>
+    <div class="review">
+      <img src="/imgs/washu-logo.jpg" class="logo">
+      <p>
+        &quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;
+      </p>
+    </div>
+    <footer>
+      Contact us: FIXME
+    </footer>
+    <script>
+      var today = new Date();
+      var day = today.getDay() - 1;
+      Array.apply(null, document.querySelectorAll(".hours > dd"))[day].classList.add("today");
+      Array.apply(null, document.querySelectorAll(".hours > dt"))[day].classList.add("today");
+    </script>
+  </body>
+</html>
