@@ -22,21 +22,13 @@
         font-family: cambria;
         src: url("../assets/fonts/cambria-regular.ttf");
       }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 1em;
-      }
 
-      a, a:visited  {
-        text-decoration: none;
-        color: inherit;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; font-size: 1em; }
+      a, a:visited  { text-decoration: none; color: inherit; }
 
       body {
-        background-color: rgb(20,24,29);
-        color: #F4F2EE;
+        background-color: #F4F2EE;
+        color: rgb(20,24,29);
         margin: 10px;
       }
 
@@ -47,42 +39,35 @@
 
       .top {
         display: block;
-        position: fixed;
         width: 100%;
         line-height: 3em;
-        background-image: linear-gradient(to bottom, rgb(20,24,29), transparent);
-        background-position: center top;
         margin: 0 -10px;
-      }
-
-      .top:before {
-        content: "\f053";
-        font-family: fas;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        padding: 0 1em;
-        font-size: 1.5em;
       }
 
       .cover {
         margin: -10px -10px 0 -10px;
         width: 100vw;
         height: 70vw;
-        background-image:
-          linear-gradient(to bottom, transparent, rgb(20,24,29)),
-          url(/imgs/aha-0-desktop-2x.jpg);
         background-repeat: no-repeat;
-        background-position: center bottom, center top;
-        background-size: 100% 100vw, cover;
+        background-position: center top;
+        background-size: cover;
       }
+
+      .coverShow0 { background-image: url(/imgs/aha-0-desktop-2x.jpg); }
+      .coverShow1 { background-image: url(/imgs/aha-1-desktop-2x.jpg); }
+      .coverShow2 { background-image: url(/imgs/aha-2-desktop-2x.jpg); }
+      .coverShow3 { background-image: url(/imgs/aha-3-desktop-2x.jpg); }
+      .coverShow4 { background-image: url(/imgs/aha-4-desktop-2x.jpg); }
 
       .intro {
         width: 100%;
-        margin-top: -30vw;
         text-align: center;
         padding: 1em 0;
         padding: 10px;
+      }
+
+      .intro > h1, .intro > p {
+        margin: 1em 0;
       }
 
       .logo {
@@ -90,19 +75,12 @@
         width: 80px;
         margin: 0 20px 20px 20px;
         border-radius: 2px;
-        border: 2px solid #F4F2EE;
+        border: 2px solid rgb(30,36,42);
       }
 
       .name {
-        font-family: cambria;
         font-size: 2em;
         white-space: pre;
-        margin: 0;
-      }
-
-      .top10 {
-        margin: 1em 0;
-        font-size: 1.7em;
       }
 
       .city {
@@ -121,9 +99,8 @@
         margin: 0.5em 0;
         display: inline-block;
         white-space: pre;
-        background-color: rgb(30,36,42);
         border-radius: 6px;
-        border: 1px solid rgb(48,57,63);
+        border: 1px solid rgb(20,24,29);
       }
 
       .button > a:before {
@@ -132,63 +109,25 @@
         text-align: center;
       }
 
-      .wwwbutton > a:before {
-        font-family: fab;
-        content: "\f39e";
-      }
+      .wwwbutton > a:before { content: "W"; }
+      .mapbutton > a:before { content: "M"; }
+      .hoursbutton > a:before { content: "H"; }
 
-      .mapbutton > a:before {
-        font-family: far;
-        content: "\f279";
-      }
-
-      .hoursbutton > a:before {
-        content: "\f017";
-        font-family: far;
-      }
-
-      .hours > dt, .hours > dd {
-        opacity: 0.5;
-      }
-      .hours > dt {
-        display: inline-block;
-        min-width: 40vw;
-      }
-      .hours > dd {
-        display: inline-block;
-      }
-
-      .hours > .today, .hours > .today {
-        opacity: 1;
-      }
-
-      .hours {
-        margin: 10px;
-      }
-
-      .hours.hidden {
-        display: none;
-      }
+      .hours > dt, .hours > dd { opacity: 0.5; }
+      .hours > dt { display: inline-block; min-width: 40vw; }
+      .hours > dd { display: inline-block; }
+      .hours > .today, .hours > .today { opacity: 1; } 
+      .hours { margin: 10px; }
+      .hours.hidden { display: none; }
 
       .images {
         height: 20vw;
-        margin: 20px -10px;
+        margin: 0 -10px;
+        font-size: 0; 
       }
 
-      .tb {
-        display: inline-block;
-        text-size: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 20vw;
-        width: 20vw;
-        border-right: 1px solid white;
-        border-bottom: 1px solid white;
-        border-top: 1px solid white;
-      }
-      .tb:last-child {
-        border-right: none;
-      }
+      .tb { display: inline-block; background-size: cover; background-repeat: no-repeat; height: 20vw; width: 20vw; border-right: 1px solid white; border-bottom: 1px solid white; border-top: 1px solid white; }
+      .tb:last-child { border-right: none; }
       #tb0 { background-image: url(/imgs/aha-0-tb-1x.jpg); }
       #tb1 { background-image: url(/imgs/aha-1-tb-1x.jpg); }
       #tb2 { background-image: url(/imgs/aha-2-tb-1x.jpg); }
@@ -198,8 +137,15 @@
     </style>
   </head>
   <body>
-    <a href="/taipei/" class="top"></a>
-    <div class="cover">
+    <a href="/taipei/" class="top">Back to the list</a>
+    <div class="cover coverShow0">
+    </div>
+    <div class="images">
+      <div id="tb1" class="tb" onclick="changeCover(1)"></div>
+      <div id="tb2" class="tb" onclick="changeCover(2)"></div>
+      <div id="tb3" class="tb" onclick="changeCover(3)"></div>
+      <div id="tb4" class="tb" onclick="changeCover(4)"></div>
+      <div id="tb0" class="tb" onclick="changeCover(0)"></div>
     </div>
     <div class="intro">
       <h1 class="name">AHA Saloon</h1>
@@ -221,9 +167,6 @@
         <dt>Sunday</dt><dd>Closed</dd>
       </dl>
     </div>
-    <div class="images">
-      <div id="tb1" class="tb"></div><div id="tb2" class="tb"></div><div id="tb3" class="tb"></div><div id="tb4" class="tb"></div><div id="tb0" class="tb"></div>
-    </div>
     <div class="review">
       <img src="/imgs/aha-logo.jpg" class="logo">
       <p>
@@ -238,6 +181,15 @@
       var day = today.getDay() - 1;
       Array.apply(null, document.querySelectorAll(".hours > dd"))[day].classList.add("today");
       Array.apply(null, document.querySelectorAll(".hours > dt"))[day].classList.add("today");
+
+      function changeCover(idx) {
+        document.querySelector(".cover").classList.remove("coverShow0");
+        document.querySelector(".cover").classList.remove("coverShow1");
+        document.querySelector(".cover").classList.remove("coverShow2");
+        document.querySelector(".cover").classList.remove("coverShow3");
+        document.querySelector(".cover").classList.remove("coverShow4");
+        document.querySelector(".cover").classList.add("coverShow" + idx);
+      }
     </script>
   </body>
 </html>
