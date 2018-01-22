@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="canonical" href="https://thebootleggerslist.com/taipei/longtail.html">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 
     <!-- Generated with https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
@@ -72,116 +71,199 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <style amp-custom>
+
+      @font-face {
+        font-family: "cambria";
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/cambria-regular.ttf) format('truetype');
+      }
+
+      * { box-sizing: border-box }
+      a, a:visited { color: inherit }
+
+      body {
+        font-family: "cambria", "arial";
+        background-color: white;
+      }
+
       main {
         margin: 0 auto;
         max-width: 800px;
       }
 
-      .intro {
+      .header {
+        letter-spacing: 2px;
+        position: fixed;
+        background: white;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+        box-shadow: inset 0 -1px 0 0 black;
+        text-transform: uppercase;
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        .header {
+          box-shadow: inset 0 -0.5px 0 0 black;
+        }
+      }
+
+      .header > a {
+        font-size: 1rem;
+        line-height: 4rem;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .header > a:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 2rem;
+        top: 1.5rem;
+        width: 1rem;
+        height: 1rem;
+        transform: rotate(45deg);
+        border-width: 0 0 1px 1px;
+        border-color: black;
+        border-style: solid;
+      }
+
+      .page {
+        padding-top: 5em;
+        /* height: 100vh; */
+      }
+
+      #intro {
         text-align: center;
       }
 
-      footer {
-        margin: 20vw 0;
+      #intro > .name {
+        letter-spacing: 2px;
+        font-size: 2rem;
+      }
+      #intro > .summary {
+        font-size: 1.5rem;
+      }
+
+      .jump {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin: 2rem 0;
+        transform: rotate(45deg);
+        border-width: 0 1px 1px 0;
+        border-color: black;
+        border-style: solid;
+      }
+
+      .meta {
+        width: 100%;
+        border-width: 1px 0 1px 0;
+        border-color: black;
+        border-style: solid;
+      }
+
+      .meta > a {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-decoration: none;
+        display: inline-block;
+        width: 33%;
         text-align: center;
+        text-transform: uppercase;
+        border-right: 1px solid black;
+        line-height: 4rem;
       }
 
-      amp-carousel {
-        background: black;
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        .meta {
+          border-width: 0.5px 0 0.5px 0;
+        }
+        .meta > a {
+          border-right: 0.5px solid black;
+        }
       }
 
-      .city {
-        text-transform: capitalize;
+      .meta > a:last-of-type {
+        border-right: none;
       }
 
-      .summary:before {content: "“"}
-      .summary:after {content: "”"}
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem 0;
+      }
 
-      .hours > dt { display: inline-block; min-width: 40vw; }
-      .hours > dd { display: inline-block; }
-      .hours { margin: 10px; }
+      .review {
+        padding: 0 1rem;
+        font-size: 1.3rem;
+      }
 
     </style>
   </head>
   <body>
+
+    <amp-state id="pagestate">
+      <script type="application/json">
+        {
+          "hidehours": true
+        }
+      </script>
+    </amp-state>
+
+    <div class="header">
+      <a href="/taipei/" class="top">The Bootleggers List</a>
+    </div>
     <main>
-      <div>
-        <a href="/taipei/" class="top">Back to the list</a>
+      <div id="intro" class="page">
+        <p class="name">Longtail</p>
+        <p class="summary">"Incredible food. Incredible cocktails."</p>
+        <amp-img src='/imgs/longtail-0-720.jpg'
+          width='720' height='480'
+          sizes="(min-width: 800px) 800px, 100vw"
+          layout="responsive"
+          alt="Longtail"
+          srcset="/imgs/longtail-0-360.jpg 360w, /imgs/longtail-0-720.jpg 720w, /imgs/longtail-0-1080.jpg 1080w, /imgs/longtail-0-1440.jpg 1440w, /imgs/longtail-0-1800.jpg 1800w, /imgs/longtail-0-2160.jpg 2160w"></amp-img>
+        <p>Longtail is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.</p>
+        <a href="#content" class="jump"></a>
       </div>
-      <div>
+      <div id="content" class="page">
+        <div class="meta"><a href="https://www.facebook.com/longtail.taipei/">facebook</a><a href="https://maps.google.com/?cid=4814859082437415695">map</a><a href="#content" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Opening hours</a></div>
 
-        <amp-carousel width="300" height="200" layout="responsive" type="slides">
-          <!-- FIXME: this is not working -->
-          <amp-img src='/imgs/longtail-0-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-0-360.jpg 360w, /imgs/longtail-0-720.jpg 720w, /imgs/longtail-0-1080.jpg 1080w, /imgs/longtail-0-1440.jpg 1440w, /imgs/longtail-0-1800.jpg 1800w, /imgs/longtail-0-2160.jpg 2160w"></amp-img>
-          <amp-img src='/imgs/longtail-1-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-1-360.jpg 360w, /imgs/longtail-1-720.jpg 720w, /imgs/longtail-1-1080.jpg 1080w, /imgs/longtail-1-1440.jpg 1440w, /imgs/longtail-1-1800.jpg 1800w, /imgs/longtail-1-2160.jpg 2160w"></amp-img>
-          <amp-img src='/imgs/longtail-2-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-2-360.jpg 360w, /imgs/longtail-2-720.jpg 720w, /imgs/longtail-2-1080.jpg 1080w, /imgs/longtail-2-1440.jpg 1440w, /imgs/longtail-2-1800.jpg 1800w, /imgs/longtail-2-2160.jpg 2160w"></amp-img>
-          <amp-img src='/imgs/longtail-3-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-3-360.jpg 360w, /imgs/longtail-3-720.jpg 720w, /imgs/longtail-3-1080.jpg 1080w, /imgs/longtail-3-1440.jpg 1440w, /imgs/longtail-3-1800.jpg 1800w, /imgs/longtail-3-2160.jpg 2160w"></amp-img>
-          <amp-img src='/imgs/longtail-4-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-4-360.jpg 360w, /imgs/longtail-4-720.jpg 720w, /imgs/longtail-4-1080.jpg 1080w, /imgs/longtail-4-1440.jpg 1440w, /imgs/longtail-4-1800.jpg 1800w, /imgs/longtail-4-2160.jpg 2160w"></amp-img>
-        </amp-carousel>
+        <div class="hours" hidden [hidden]="pagestate.hidehours">
+          <dl>
+            <dt>Monday</dt><dd>6:00 PM – 2:00 AM</dd>
+            <dt>Tuesday</dt><dd>Closed</dd>
+            <dt>Wednesday</dt><dd>6:00 PM – 2:00 AM</dd>
+            <dt>Thursday</dt><dd>6:00 PM – 3:00 AM</dd>
+            <dt>Friday</dt><dd>6:00 PM – 3:00 AM</dd>
+            <dt>Saturday</dt><dd>6:00 PM – 3:00 AM</dd>
+            <dt>Sunday</dt><dd>6:00 PM – 2:00 AM</dd>
+          </dl> 
+        </div>
 
-      </div>
-      <div class="intro">
-        <h1 class="name">Longtail</h1>
-        <p>TOP 10</p>
-        <p>Bootleggers List 2018, <span class="city">taipei</span>.</p>
-        <p class="summary">Incredible food. Incredible cocktails.</p>
-        <amp-img src='/imgs/longtail-logo.jpg' width='120' height='120'>
-        </amp-img>
-      </div>
-      <div>
-        <p><a href="https://maps.google.com/?cid=4814859082437415695" target="_blank">Map</a></p>
-        <p><a href="http://longtail.com.tw/" target="_blank">Facebook</a></p>
-        <p>Hours:</p>
-        <dl class="hours">
-          <dt>Monday</dt><dd>6:00 PM – 2:00 AM</dd>
-          <dt>Tuesday</dt><dd>Closed</dd>
-          <dt>Wednesday</dt><dd>6:00 PM – 2:00 AM</dd>
-          <dt>Thursday</dt><dd>6:00 PM – 3:00 AM</dd>
-          <dt>Friday</dt><dd>6:00 PM – 3:00 AM</dd>
-          <dt>Saturday</dt><dd>6:00 PM – 3:00 AM</dd>
-          <dt>Sunday</dt><dd>6:00 PM – 2:00 AM</dd>
-        </dl>
-      </div>
-      <div class="review">
-        <h2>review</h2>
-        <p>
-          <p>Grandiose place!</p>
-
-<p>People say it&#8217;s a restaurant with delicious cocktails. We would argue that it&#8217;s an incredible bar that happens to have the most talented cook!</p>
-
-<p>My recommendation for the food is to just order tons of starters. They all are amazing (I recommend the shrimp sliders). The entries are great too, but I&#8217;d rather get stuffed with the starters.</p>
-
-<p>As for the cocktails - they have so many layers. Got for the Penicilin first. You&#8217;ll understand what I mean by layers. One, two and three waves of different tastes. &quot;Controlled complexity&quot;. Want more body? Try their Midnight Oil.</p>
-
-<p>If you want to have dinner there, eat at the bar, or try to get the japanese-style table in the left corner.</p>
-
-<p>The staff will remember your name and even what you ordered last time. They pay special attention to you to make sure you feel like at home.</p>
-
-<p>From facebook:</p>
-
-<p>Longtail餐廳酒吧提供美味創意料理與酒飲，親切服務及溫暖氛圍，讓客人自在體現絢爛台北夜生活，是聚會及用餐的好去處。林明健主廚運用當季食材，結合多國料理手法及創意，呈現無國界當代料理；酒單則提供精品葡萄酒、精釀啤酒及創意調酒，滿足您不同需求。 Longtail位於台北市區，晚餐及宵夜時段營業，您可選擇各式風格的座位區域，包括舒適溫馨的沙發區、吧檯、或靠近廚房的座位捕捉廚師料理時的認真樣貌。本餐廳接受訂位，也歡迎沒有提前計畫或預約的客人及國外旅客，Longtail希望打造一處有如家一般，讓人感覺輕鬆、自在、難忘的空間。</p>
-
-<p>Longtail is a neighborhood gathering place that embodies the sophisticated yet relaxed Taipei lifestyle with great food and drinks, understated service, and a warm inviting setting. The seasonal menu features contemporary cuisine with global flavors and a rotating list of boutique wines, craft beers, and exciting cocktails. Whatever you’re craving, our staff is there to help create the perfect dining experience.</p>
-
-<p>Conveniently located in downtown Taipei, Longtail is open late every night and offers a variety of seating choices including cozy lounge, bar counter, and standard tables close enough to the kitchen to catch all the action. We accept reservations, but our door is always open to walk-ins, wayfarers, and anyone else who doesn’t believe in planning. Our goal is to make Longtail a second home where guests can visit at anytime to feel stimulated, welcomed, and remembered.</p>
-
+        <h2>Review</h2>
+        <p class="review">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum leo ipsum, porttitor fringilla lectus pretium in. Duis ultricies bibendum elit, nec fringilla sem pharetra a. Pellentesque rutrum dignissim elit, sed porttitor lectus commodo ut. Nunc non euismod augue. Suspendisse porta magna sed nisi consectetur suscipit. Donec convallis, quam a cursus lobortis, erat velit vehicula neque, sed feugiat libero ante at velit. Suspendisse eleifend lacus ut velit vulputate, ut posuere ex ornare. Pellentesque quis lacus vel ante laoreet eleifend. Donec faucibus vehicula diam, a posuere ex eleifend ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in leo mollis nisl tempus vulputate at eget elit. Donec mattis eros elementum vulputate condimentum. Aenean vel ex sed diam lacinia lacinia. Nulla eget urna id risus consectetur maximus in in mauris. Curabitur in euismod risus, quis lobortis nunc. Nunc cursus sodales rutrum. Nulla aliquam cursus nisl a placerat. Maecenas ac odio ac risus aliquam commodo. Morbi pharetra urna quis lectus vehicula, sit amet convallis mi elementum. Proin ac maximus justo. Pellentesque aliquam gravida metus sed tincidunt. Suspendisse quam erat, vestibulum in porttitor sed, volutpat sed metus. Donec mattis metus lectus, at molestie tellus commodo pulvinar. Nunc non.
         </p>
       </div>
-      <div class="restaurant">
-        <h2>recommendation for dinner:</h2>
+      <div>
+        <h2>Near by restaurant recommendation</h2>
         <p>
           <p>Eat at Longtail.</p>
 
         </p>
       </div>
       <div>
-        <h2>map</h2>
-        <amp-iframe width="300" height="100"
-            sandbox="allow-scripts allow-same-origin"
-            layout="responsive"
-            frameborder="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2986208253474!2d121.54606331500602!3d25.023937983977156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42d1d0d3443ed30f!2sLongtail!5e0!3m2!1sen!2stw!4v1516178337461">
-        </amp-iframe>
+        <amp-img src='/imgs/longtail-1-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-1-360.jpg 360w, /imgs/longtail-1-720.jpg 720w, /imgs/longtail-1-1080.jpg 1080w, /imgs/longtail-1-1440.jpg 1440w, /imgs/longtail-1-1800.jpg 1800w, /imgs/longtail-1-2160.jpg 2160w"></amp-img>
+        <amp-img src='/imgs/longtail-2-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-2-360.jpg 360w, /imgs/longtail-2-720.jpg 720w, /imgs/longtail-2-1080.jpg 1080w, /imgs/longtail-2-1440.jpg 1440w, /imgs/longtail-2-1800.jpg 1800w, /imgs/longtail-2-2160.jpg 2160w"></amp-img>
+        <amp-img src='/imgs/longtail-3-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-3-360.jpg 360w, /imgs/longtail-3-720.jpg 720w, /imgs/longtail-3-1080.jpg 1080w, /imgs/longtail-3-1440.jpg 1440w, /imgs/longtail-3-1800.jpg 1800w, /imgs/longtail-3-2160.jpg 2160w"></amp-img>
+        <amp-img src='/imgs/longtail-4-720.jpg' width='720' height='480' sizes="(min-width: 800px) 800px, 100vw" layout="responsive" alt="Longtail" srcset="/imgs/longtail-4-360.jpg 360w, /imgs/longtail-4-720.jpg 720w, /imgs/longtail-4-1080.jpg 1080w, /imgs/longtail-4-1440.jpg 1440w, /imgs/longtail-4-1800.jpg 1800w, /imgs/longtail-4-2160.jpg 2160w"></amp-img>
       </div>
       <footer>
         Contact us: FIXME

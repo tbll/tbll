@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://thebootleggerslist.com//.html">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
     <!-- Generated with https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
@@ -91,7 +92,7 @@
             {
              "@type": "ListItem",
              "url": "https://thebootleggerslist.com/taipei/mozi",
-             "name": "Mozi Bar",
+             "name": "Mozi",
              "position": "8"
             },
         
@@ -109,11 +110,14 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <style amp-custom>
+      main {
+        margin: 0 auto;
+        max-width: 800px;
+      }
     </style>
   </head>
   <body>
     <main>
-      <!-- Use amp-list -->
       <ul>
         
         <li><a href="taipei/magicbistro.html">Bar CityNorth 小城外</a></li>
@@ -134,12 +138,24 @@
         
         <li><a href="taipei/aha.html">AHA Saloon</a></li>
         
-        <li><a href="taipei/mozi.html">Mozi Bar</a></li>
+        <li><a href="taipei/mozi.html">Mozi</a></li>
         
         <li><a href="taipei/washu.html">WA-SHU
 和酒</a></li>
         
       </ul>
+
+
+      <p>
+        <a href="https://drive.google.com/open?id=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q&usp=sharing" target="_blank">See the 10 bars on Google map</a>
+      </p>
+      <amp-iframe width="800" height="800"
+          sandbox="allow-scripts allow-same-origin allow-popups"
+          layout="responsive"
+          frameborder="0"
+          src="https://www.google.com/maps/d/embed?mid=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q">
+          <div layout="responsive" placeholder>Map loading</div>
+      </amp-iframe>
     </main>
 
     <amp-analytics type="googleanalytics">
