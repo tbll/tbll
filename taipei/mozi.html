@@ -11,6 +11,8 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
 
 
     <!-- Generated with https://realfavicongenerator.net -->
@@ -80,8 +82,8 @@
         color: #000000;
       }
 
-      body {
-        font-family: "cambria", "arial";
+      .cambriaready body {
+        font-family: "cambria", Helvetica, Arial;
       }
 
       main {
@@ -247,6 +249,12 @@
   </head>
   <body>
 
+    <amp-font
+        layout="nodisplay"
+        font-family="cambria"
+        timeout="3000"
+        on-load-add-class="cambriaready"></amp-font>
+
     <amp-state id="pagestate">
       <script type="application/json">
         {
@@ -300,7 +308,7 @@
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt="Mozi"
-          srcset="/imgs/mozi-0-360.jpg 360w, /imgs/mozi-0-720.jpg 720w, /imgs/mozi-0-1080.jpg 1080w, /imgs/mozi-0-1440.jpg 1440w, /imgs/mozi-0-1800.jpg 1800w, /imgs/mozi-0-2160.jpg 2160w">
+          srcset="/imgs/mozi-0-360.jpg 360w, /imgs/mozi-0-720.jpg 720w, /imgs/mozi-0-1080.jpg 1080w, /imgs/mozi-0-1440.jpg 1440w, /imgs/mozi-0-1800.jpg 1800w">
         </amp-img>
         <div id="meta">
           <div id="award">
@@ -309,7 +317,7 @@
                 src='/assets/imgs/award.png'
                 width='600'
                 height='671'
-                sizes="(min-width: 800px) 266px, 30vw"
+                sizes="(min-width: 800px) 240px, 30vw"
                 alt="Mozi is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
               </amp-img>
             </a>
@@ -375,7 +383,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": The bar is hidden behind the bookshelf of a hair salon"
-            srcset="/imgs/mozi-1-360.jpg 360w, /imgs/mozi-1-720.jpg 720w, /imgs/mozi-1-1080.jpg 1080w, /imgs/mozi-1-1440.jpg 1440w, /imgs/mozi-1-1800.jpg 1800w, /imgs/mozi-1-2160.jpg 2160w">
+            srcset="/imgs/mozi-1-360.jpg 360w, /imgs/mozi-1-720.jpg 720w, /imgs/mozi-1-1080.jpg 1080w, /imgs/mozi-1-1440.jpg 1440w, /imgs/mozi-1-1800.jpg 1800w">
           </amp-img>
           <figcaption>The bar is hidden behind the bookshelf of a hair salon</figcaption>
         </figure>
@@ -390,7 +398,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Beautiful and comfy room"
-            srcset="/imgs/mozi-2-360.jpg 360w, /imgs/mozi-2-720.jpg 720w, /imgs/mozi-2-1080.jpg 1080w, /imgs/mozi-2-1440.jpg 1440w, /imgs/mozi-2-1800.jpg 1800w, /imgs/mozi-2-2160.jpg 2160w">
+            srcset="/imgs/mozi-2-360.jpg 360w, /imgs/mozi-2-720.jpg 720w, /imgs/mozi-2-1080.jpg 1080w, /imgs/mozi-2-1440.jpg 1440w, /imgs/mozi-2-1800.jpg 1800w">
           </amp-img>
           <figcaption>Beautiful and comfy room</figcaption>
         </figure>
@@ -405,7 +413,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": A simple cup of tea?"
-            srcset="/imgs/mozi-3-360.jpg 360w, /imgs/mozi-3-720.jpg 720w, /imgs/mozi-3-1080.jpg 1080w, /imgs/mozi-3-1440.jpg 1440w, /imgs/mozi-3-1800.jpg 1800w, /imgs/mozi-3-2160.jpg 2160w">
+            srcset="/imgs/mozi-3-360.jpg 360w, /imgs/mozi-3-720.jpg 720w, /imgs/mozi-3-1080.jpg 1080w, /imgs/mozi-3-1440.jpg 1440w, /imgs/mozi-3-1800.jpg 1800w">
           </amp-img>
           <figcaption>A simple cup of tea?</figcaption>
         </figure>
@@ -420,7 +428,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Try the food"
-            srcset="/imgs/mozi-4-360.jpg 360w, /imgs/mozi-4-720.jpg 720w, /imgs/mozi-4-1080.jpg 1080w, /imgs/mozi-4-1440.jpg 1440w, /imgs/mozi-4-1800.jpg 1800w, /imgs/mozi-4-2160.jpg 2160w">
+            srcset="/imgs/mozi-4-360.jpg 360w, /imgs/mozi-4-720.jpg 720w, /imgs/mozi-4-1080.jpg 1080w, /imgs/mozi-4-1440.jpg 1440w, /imgs/mozi-4-1800.jpg 1800w">
           </amp-img>
           <figcaption>Try the food</figcaption>
         </figure>

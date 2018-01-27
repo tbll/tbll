@@ -11,6 +11,8 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
 
 
     <!-- Generated with https://realfavicongenerator.net -->
@@ -88,8 +90,8 @@
         color: #000000;
       }
 
-      body {
-        font-family: "cambria", "arial";
+      .cambriaready body {
+        font-family: "cambria", Helvetica, Arial;
       }
 
       main {
@@ -255,6 +257,12 @@
   </head>
   <body>
 
+    <amp-font
+        layout="nodisplay"
+        font-family="cambria"
+        timeout="3000"
+        on-load-add-class="cambriaready"></amp-font>
+
     <amp-state id="pagestate">
       <script type="application/json">
         {
@@ -308,7 +316,7 @@
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt="Mimique"
-          srcset="/imgs/mimique-0-360.jpg 360w, /imgs/mimique-0-720.jpg 720w, /imgs/mimique-0-1080.jpg 1080w, /imgs/mimique-0-1440.jpg 1440w, /imgs/mimique-0-1800.jpg 1800w, /imgs/mimique-0-2160.jpg 2160w">
+          srcset="/imgs/mimique-0-360.jpg 360w, /imgs/mimique-0-720.jpg 720w, /imgs/mimique-0-1080.jpg 1080w, /imgs/mimique-0-1440.jpg 1440w, /imgs/mimique-0-1800.jpg 1800w">
         </amp-img>
         <div id="meta">
           <div id="award">
@@ -317,7 +325,7 @@
                 src='/assets/imgs/award.png'
                 width='600'
                 height='671'
-                sizes="(min-width: 800px) 266px, 30vw"
+                sizes="(min-width: 800px) 240px, 30vw"
                 alt="Mimique is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
               </amp-img>
             </a>
@@ -383,7 +391,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Always beautiful cups"
-            srcset="/imgs/mimique-1-360.jpg 360w, /imgs/mimique-1-720.jpg 720w, /imgs/mimique-1-1080.jpg 1080w, /imgs/mimique-1-1440.jpg 1440w, /imgs/mimique-1-1800.jpg 1800w, /imgs/mimique-1-2160.jpg 2160w">
+            srcset="/imgs/mimique-1-360.jpg 360w, /imgs/mimique-1-720.jpg 720w, /imgs/mimique-1-1080.jpg 1080w, /imgs/mimique-1-1440.jpg 1440w, /imgs/mimique-1-1800.jpg 1800w">
           </amp-img>
           <figcaption>Always beautiful cups</figcaption>
         </figure>
@@ -398,7 +406,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Staff at work"
-            srcset="/imgs/mimique-2-360.jpg 360w, /imgs/mimique-2-720.jpg 720w, /imgs/mimique-2-1080.jpg 1080w, /imgs/mimique-2-1440.jpg 1440w, /imgs/mimique-2-1800.jpg 1800w, /imgs/mimique-2-2160.jpg 2160w">
+            srcset="/imgs/mimique-2-360.jpg 360w, /imgs/mimique-2-720.jpg 720w, /imgs/mimique-2-1080.jpg 1080w, /imgs/mimique-2-1440.jpg 1440w, /imgs/mimique-2-1800.jpg 1800w">
           </amp-img>
           <figcaption>Staff at work</figcaption>
         </figure>
@@ -413,7 +421,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Find your favorite corner"
-            srcset="/imgs/mimique-3-360.jpg 360w, /imgs/mimique-3-720.jpg 720w, /imgs/mimique-3-1080.jpg 1080w, /imgs/mimique-3-1440.jpg 1440w, /imgs/mimique-3-1800.jpg 1800w, /imgs/mimique-3-2160.jpg 2160w">
+            srcset="/imgs/mimique-3-360.jpg 360w, /imgs/mimique-3-720.jpg 720w, /imgs/mimique-3-1080.jpg 1080w, /imgs/mimique-3-1440.jpg 1440w, /imgs/mimique-3-1800.jpg 1800w">
           </amp-img>
           <figcaption>Find your favorite corner</figcaption>
         </figure>
@@ -428,7 +436,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": A cosy place"
-            srcset="/imgs/mimique-4-360.jpg 360w, /imgs/mimique-4-720.jpg 720w, /imgs/mimique-4-1080.jpg 1080w, /imgs/mimique-4-1440.jpg 1440w, /imgs/mimique-4-1800.jpg 1800w, /imgs/mimique-4-2160.jpg 2160w">
+            srcset="/imgs/mimique-4-360.jpg 360w, /imgs/mimique-4-720.jpg 720w, /imgs/mimique-4-1080.jpg 1080w, /imgs/mimique-4-1440.jpg 1440w, /imgs/mimique-4-1800.jpg 1800w">
           </amp-img>
           <figcaption>A cosy place</figcaption>
         </figure>

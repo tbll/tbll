@@ -12,6 +12,8 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
 
 
     <!-- Generated with https://realfavicongenerator.net -->
@@ -91,8 +93,8 @@
         color: #000000;
       }
 
-      body {
-        font-family: "cambria", "arial";
+      .cambriaready body {
+        font-family: "cambria", Helvetica, Arial;
       }
 
       main {
@@ -258,6 +260,12 @@
   </head>
   <body>
 
+    <amp-font
+        layout="nodisplay"
+        font-family="cambria"
+        timeout="3000"
+        on-load-add-class="cambriaready"></amp-font>
+
     <amp-state id="pagestate">
       <script type="application/json">
         {
@@ -312,7 +320,7 @@
           layout="responsive"
           alt="Ginspiration
 發琴吧"
-          srcset="/imgs/ginspiration-0-360.jpg 360w, /imgs/ginspiration-0-720.jpg 720w, /imgs/ginspiration-0-1080.jpg 1080w, /imgs/ginspiration-0-1440.jpg 1440w, /imgs/ginspiration-0-1800.jpg 1800w, /imgs/ginspiration-0-2160.jpg 2160w">
+          srcset="/imgs/ginspiration-0-360.jpg 360w, /imgs/ginspiration-0-720.jpg 720w, /imgs/ginspiration-0-1080.jpg 1080w, /imgs/ginspiration-0-1440.jpg 1440w, /imgs/ginspiration-0-1800.jpg 1800w">
         </amp-img>
         <div id="meta">
           <div id="award">
@@ -321,7 +329,7 @@
                 src='/assets/imgs/award.png'
                 width='600'
                 height='671'
-                sizes="(min-width: 800px) 266px, 30vw"
+                sizes="(min-width: 800px) 240px, 30vw"
                 alt="Ginspiration
 發琴吧 is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
               </amp-img>
@@ -389,7 +397,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Incredible cocktails"
-            srcset="/imgs/ginspiration-1-360.jpg 360w, /imgs/ginspiration-1-720.jpg 720w, /imgs/ginspiration-1-1080.jpg 1080w, /imgs/ginspiration-1-1440.jpg 1440w, /imgs/ginspiration-1-1800.jpg 1800w, /imgs/ginspiration-1-2160.jpg 2160w">
+            srcset="/imgs/ginspiration-1-360.jpg 360w, /imgs/ginspiration-1-720.jpg 720w, /imgs/ginspiration-1-1080.jpg 1080w, /imgs/ginspiration-1-1440.jpg 1440w, /imgs/ginspiration-1-1800.jpg 1800w">
           </amp-img>
           <figcaption>Incredible cocktails</figcaption>
         </figure>
@@ -404,7 +412,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Go up the third floor"
-            srcset="/imgs/ginspiration-2-360.jpg 360w, /imgs/ginspiration-2-720.jpg 720w, /imgs/ginspiration-2-1080.jpg 1080w, /imgs/ginspiration-2-1440.jpg 1440w, /imgs/ginspiration-2-1800.jpg 1800w, /imgs/ginspiration-2-2160.jpg 2160w">
+            srcset="/imgs/ginspiration-2-360.jpg 360w, /imgs/ginspiration-2-720.jpg 720w, /imgs/ginspiration-2-1080.jpg 1080w, /imgs/ginspiration-2-1440.jpg 1440w, /imgs/ginspiration-2-1800.jpg 1800w">
           </amp-img>
           <figcaption>Go up the third floor</figcaption>
         </figure>
@@ -419,7 +427,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": … behind the red curtain"
-            srcset="/imgs/ginspiration-3-360.jpg 360w, /imgs/ginspiration-3-720.jpg 720w, /imgs/ginspiration-3-1080.jpg 1080w, /imgs/ginspiration-3-1440.jpg 1440w, /imgs/ginspiration-3-1800.jpg 1800w, /imgs/ginspiration-3-2160.jpg 2160w">
+            srcset="/imgs/ginspiration-3-360.jpg 360w, /imgs/ginspiration-3-720.jpg 720w, /imgs/ginspiration-3-1080.jpg 1080w, /imgs/ginspiration-3-1440.jpg 1440w, /imgs/ginspiration-3-1800.jpg 1800w">
           </amp-img>
           <figcaption>… behind the red curtain</figcaption>
         </figure>
@@ -434,7 +442,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": … to find the bar."
-            srcset="/imgs/ginspiration-4-360.jpg 360w, /imgs/ginspiration-4-720.jpg 720w, /imgs/ginspiration-4-1080.jpg 1080w, /imgs/ginspiration-4-1440.jpg 1440w, /imgs/ginspiration-4-1800.jpg 1800w, /imgs/ginspiration-4-2160.jpg 2160w">
+            srcset="/imgs/ginspiration-4-360.jpg 360w, /imgs/ginspiration-4-720.jpg 720w, /imgs/ginspiration-4-1080.jpg 1080w, /imgs/ginspiration-4-1440.jpg 1440w, /imgs/ginspiration-4-1800.jpg 1800w">
           </amp-img>
           <figcaption>… to find the bar.</figcaption>
         </figure>
