@@ -107,7 +107,7 @@
         letter-spacing: 2px;
         background: #FFFFFF;
         text-align: center;
-        box-shadow: inset 0 -1px 0 0 #000000;
+        border-bottom: 1px solid #000000;
         text-transform: uppercase;
         line-height: 4rem;
         text-decoration: none;
@@ -120,7 +120,7 @@
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
         header > .backtext {
-          box-shadow: inset 0 -0.5px 0 0 #000000;
+          border-bottom: 0.5px solid #000000;
         }
       }
 
@@ -141,7 +141,7 @@
         height: 1rem;
         display: block;
         transform: rotate(45deg);
-        box-shadow: inset 0 -1px 0 0 #000000, inset 1px 0 0 #000000, inset 0 -2px 0 0 #FFFFFF, inset 2px 0 0 #FFFFFF;
+        box-shadow: inset 1px -1px 0 0 #000000, inset 2px -2px 0 0 #FFFFFF;
       }
 
       .togglehours {
@@ -169,7 +169,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom, transparent, #FFFFFF);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), #FFFFFF);
       }
 
       #review.hidereview {
@@ -195,7 +195,7 @@
 
       #meta {
         width: 100%;
-        background-image: linear-gradient(transparent, #FFFFFF 50px);
+        background-image: linear-gradient(rgba(255,255,255,0.001), #FFFFFF 50px);
         position: relative;
         margin-top: -50px;
         padding: 20px 6px 0 6px;
@@ -210,6 +210,7 @@
       }
 
       .name {
+        font-size: 1rem;
         letter-spacing: 2px;
         text-transform: uppercase;
         white-space: pre;
@@ -285,6 +286,8 @@
       <amp-position-observer on="exit:showheader.start enter:hideheader.start" layout="nodisplay"></amp-position-observer>
     </div>
 
+    <!-- FIXME: are we happy with the markup? Look at safari reader mode -->
+
     <header>
       <a class="backtext" href="/">The Bootleggers List</a>
       <a class="backicon" href="/" aria-label="back to list"></a>
@@ -313,8 +316,8 @@
               </amp-img>
             </a>
           </div>
-          <p class="name">The Tender Land
-溫柔鄉</p>
+          <h1 class="name">The Tender Land
+溫柔鄉</h1>
           <p class="summary">"A bar for bartenders and for night owls."</p>
           <p>Part Of Top 10 Cocktail Bar in <span class="city">taipei</span> (<a href="/">see more</a>)</p>
           <p>
