@@ -11,9 +11,9 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 
-
-    <!-- Generated with https://realfavicongenerator.net -->
+        <!-- Generated with https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -22,6 +22,9 @@
     <link rel="shortcut icon" href="/assets/icons/favicon.ico">
     <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
     <meta name="theme-color" content="#151c22">
+
+
+
 
     <!-- FIXME: any change here needs to be done in list.html as well -->
     <!-- Validate any change: https://search.google.com/structured-data/testing-tool -->
@@ -72,96 +75,136 @@
     <style amp-custom>
 
       @font-face {
-        font-family: "cambria";
-        font-style: normal;
-        font-weight: 400;
-        src: url(/assets/fonts/cambria-regular.ttf) format('truetype');
-      }
+  font-family: "cambria";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/cambria-regular.ttf) format('truetype');
+}
 
-      * { box-sizing: border-box }
-      a, a:visited { color: inherit }
+* { box-sizing: border-box }
+a, a:visited { color: inherit }
 
-      html {
-        background-color: #11161C;
-        color: #BD975E;
-      }
+html {
+  background-color: #11161C;
+  color: #BD975E;
+}
 
-      body {
-        font-family: "cambria", "arial";
-      }
+.cambriaready body {
+  font-family: "cambria", Georgia, Helvetica, Arial;
+}
 
-      main {
-        margin: 0 auto;
-        max-width: 800px;
-      }
+main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #11161C;
+}
 
-      footer {
-        margin: 4rem 0;
-        text-align: center;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
+footer {
+  padding: 4rem 0;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-      header {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-      }
+h1 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: pre;
+}
 
-      header > .backtext {
-        display: block;
-        width: 100%;
-        letter-spacing: 2px;
-        background: #11161C;
-        text-align: center;
-        border-bottom: 1px solid #BD975E;
-        text-transform: uppercase;
-        line-height: 4rem;
-        text-decoration: none;
-        padding: 0 3rem;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        opacity: 0;
-      }
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  letter-spacing: 2px;
+}
 
-      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-        header > .backtext {
-          border-bottom: 0.5px solid #BD975E;
-        }
-      }
+.capitalize {
+  text-transform: capitalize;
+}
 
-      header > .backicon {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        width: 2rem;
-        height: 2rem;
-      }
+.nounderline {
+  text-decoration: none;
+}
 
-      header > .backicon:after {
-        content: "";
-        position: absolute;
-        left: 0.5rem;
-        top: 0.5rem;
-        width: 1rem;
-        height: 1rem;
-        display: block;
-        transform: rotate(45deg);
-        box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+header > .backtext {
+  display: block;
+  width: 100%;
+  letter-spacing: 2px;
+  background: #11161C;
+  text-align: center;
+  border-bottom: 1px solid #BD975E;
+  text-transform: uppercase;
+  line-height: 4rem;
+  padding: 0 3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  header > .backtext {
+    border-bottom: 0.5px solid #BD975E;
+  }
+}
+
+header > .backicon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+header > .backicon:after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  transform: rotate(45deg);
+  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+}
+
+@media (min-width: 800px) {
+  html {
+    background: #EEE;
+  }
+  main {
+    margin: 5px auto 50px;;
+    box-shadow: 0px 6px 12px 3px rgba(0,0,0,0.2);
+  }
+  .name {
+    font-size: 2rem;
+  }
+  header {
+    width: 800px;
+    margin: auto;
+    right: 50%;
+    margin-right: -400px;
+  }
+}
+
+      
+      #content {
+        clear: both;
       }
 
       .togglehours {
         cursor: pointer;
-      }
-
-      h2 {
-        text-align: center;
-        text-transform: uppercase;
-        margin: 2rem 0;
-        letter-spacing: 2px;
       }
 
       #review {
@@ -178,7 +221,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.001), #11161C);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), #11161C);
       }
 
       #review.hidereview {
@@ -190,14 +233,16 @@
         text-align: center;
       }
 
-      .collapsebutton > a {
+      .collapsebutton > span {
         border: 1px solid #BD975E;
         padding: 0.5rem 2rem;
         border-radius: 10px;
-        text-decoration: none;
       }
 
-      figure { margin: 0 0 1rem 0 }
+      figure {
+        margin: 0 0 1rem 0;
+      }
+
       figcaption {
         text-align: center;
       }
@@ -215,17 +260,6 @@
         overflow: hidden;
       }
 
-      .name {
-        font-size: 1rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        white-space: pre;
-      }
-
-      .city {
-        text-transform: capitalize;
-      }
-
       .button {
         padding: 0 3px;
         border-radius: 3px;
@@ -240,65 +274,72 @@
         pointer-events: none;
       }
 
-      .button > a {
-        text-decoration: none;
-      }
-
       .restaurant {
         padding: 1rem;
-        text-align: center;
+      }
+
+      .hours {
+        clear: both;
+        text-align: left;
+        padding: 10px;
+      }
+
+      .hours > table > tbody > tr > th:first-of-type {
+        padding-right: 20px;
       }
 
     </style>
   </head>
   <body>
 
+    <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
+
     <amp-state id="pagestate">
       <script type="application/json">
         {
           "hidehours": true,
-            "hidereview": true
+          "hidereview": true
         }
       </script>
     </amp-state>
-
-    <amp-animation id="showheader" layout="nodisplay">
-      <script type="application/json">
-        {
-          "duration": "500ms",
-            "fill": "both",
-            "animations": [{
-              "selector": ".backtext",
-              "keyframes": {"opacity": 1}
-            }]
-        }
-      </script>
-    </amp-animation>
-
-    <amp-animation id="hideheader" layout="nodisplay">
-      <script type="application/json">
-        {
-          "duration": "0.1s",
-            "fill": "both",
-            "animations": [{
-              "selector": ".backtext",
-              "keyframes": {"opacity": 0}
-            }]
-        }
-      </script>
-    </amp-animation>
 
     <div class="headerscrollouttrigger">
       <amp-position-observer on="exit:showheader.start enter:hideheader.start" layout="nodisplay"></amp-position-observer>
     </div>
 
-    <!-- FIXME: are we happy with the markup? Look at safari reader mode -->
-
-    <header>
-      <a class="backtext" href="/">The Bootleggers List</a>
-      <a class="backicon" href="/" aria-label="back to list"></a>
-    </header>
     <main>
+
+      <amp-animation id="showheader" layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "500ms",
+        "fill": "both",
+        "animations": [{
+          "selector": ".backtext",
+          "keyframes": {"opacity": 1}
+        }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideheader" layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "0.1s",
+        "fill": "both",
+        "animations": [{
+          "selector": ".backtext",
+          "keyframes": {"opacity": 0}
+        }]
+    }
+  </script>
+</amp-animation>
+
+<header>
+  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
+  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to list"></a>
+</header>
+
 
       <div id="intro">
         <amp-img id="cover" src='/imgs/citynorth-0-720.jpg'
@@ -306,67 +347,67 @@
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt="CityNorth 小城外"
-          srcset="/imgs/citynorth-0-360.jpg 360w, /imgs/citynorth-0-720.jpg 720w, /imgs/citynorth-0-1080.jpg 1080w, /imgs/citynorth-0-1440.jpg 1440w, /imgs/citynorth-0-1800.jpg 1800w, /imgs/citynorth-0-2160.jpg 2160w">
+          srcset="/imgs/citynorth-0-360.jpg 360w, /imgs/citynorth-0-720.jpg 720w, /imgs/citynorth-0-1080.jpg 1080w, /imgs/citynorth-0-1440.jpg 1440w, /imgs/citynorth-0-1800.jpg 1800w">
         </amp-img>
         <div id="meta">
           <div id="award">
-            <a href="/">
+            <a class="nounderline" href="/">
               <amp-img
                 src='/assets/imgs/award.png'
                 width='600'
                 height='671'
-                sizes="(min-width: 800px) 266px, 30vw"
+                sizes="(min-width: 800px) 240px, 30vw"
                 alt="CityNorth 小城外 is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
               </amp-img>
             </a>
           </div>
           <h1 class="name">CityNorth 小城外</h1>
           <p class="summary">"Modest and humble, but delicious and cosy."</p>
-          <p>CityNorth is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="city">taipei</span>.</p>
+          <p>CityNorth is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="capitalize">taipei</span>.</p>
           <p>
-            <span class="button"><a target="_blank" href="https://www.facebook.com/barcitynorth/">facebook</a></span>
-            <span class="button"><a target="_blank" href="https://maps.google.com/?cid=11357470301836078205">map</a></span>
+            <span class="button"><a class="nounderline" target="_blank" href="https://www.facebook.com/barcitynorth/">CityNorth on facebook</a></span>
+            <span class="button"><a class="nounderline"  target="_blank" href="https://maps.google.com/?cid=11357470301836078205">map</a></span>
             <span class="button togglehours" role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</span>
           </p>
 
           <div class="hours" hidden [hidden]="pagestate.hidehours">
-            <dl>
-              <dt>Monday</dt><dd>7:00 PM – 2:00 AM</dd>
-              <dt>Tuesday</dt><dd>Closed</dd>
-              <dt>Wednesday</dt><dd>7:00 PM – 2:00 AM</dd>
-              <dt>Thursday</dt><dd>7:00 PM – 2:00 AM</dd>
-              <dt>Friday</dt><dd>7:00 PM – 3:00 AM</dd>
-              <dt>Saturday</dt><dd>7:00 PM – 3:00 AM</dd>
-              <dt>Sunday</dt><dd>7:00 PM – 2:00 AM</dd>
-            </dl> 
+            <table>
+              <tbody>
+                <tr><th>Monday</th><th>7:00 PM – 2:00 AM</th></tr>
+                <tr><th>Tuesday</th><th>Closed</th></tr>
+                <tr><th>Wednesday</th><th>7:00 PM – 2:00 AM</th></tr>
+                <tr><th>Thursday</th><th>7:00 PM – 2:00 AM</th></tr>
+                <tr><th>Friday</th><th>7:00 PM – 3:00 AM</th></tr>
+                <tr><th>Saturday</th><th>7:00 PM – 3:00 AM</th></tr>
+                <tr><th>Sunday</th><th>7:00 PM – 2:00 AM</th></tr>
+              </tbody>
+            </table>
           </div>
 
         </div>
       </div>
 
       <div id="content">
-
         <h2>Review</h2>
-
         <div id="review" class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum leo ipsum, porttitor fringilla lectus pretium in. Duis ultricies bibendum elit, nec fringilla sem pharetra a. Pellentesque rutrum dignissim elit, sed porttitor lectus commodo ut. Nunc non euismod augue. Suspendisse porta magna sed nisi consectetur suscipit. Donec convallis, quam a cursus lobortis, erat velit vehicula neque, sed feugiat libero ante at velit. Suspendisse eleifend lacus ut velit vulputate, ut posuere ex ornare. Pellentesque quis lacus vel ante laoreet eleifend. Donec faucibus vehicula diam, a posuere ex eleifend ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in leo mollis nisl tempus vulputate at eget elit. Donec mattis eros elementum vulputate condimentum. Aenean vel ex sed diam lacinia lacinia. Nulla eget urna id risus consectetur maximus in in mauris. Curabitur in euismod risus, quis lobortis nunc. Nunc cursus sodales rutrum. Nulla aliquam cursus nisl a placerat. Maecenas ac odio ac risus aliquam commodo. Morbi pharetra urna quis lectus vehicula, sit amet convallis mi elementum. Proin ac maximus justo. Pellentesque aliquam gravida metus sed tincidunt. Suspendisse quam erat, vestibulum in porttitor sed, volutpat sed metus. Donec mattis metus lectus, at molestie tellus commodo pulvinar. Nunc non.
           </p>
         </div>
         <div class="collapsebutton">
-          <a href="#!" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</a>
+          <span role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</span>
         </div>
+      </div>
 
+      <div>
         <h2>Restaurant suggestion</h2>
-
         <div class="restaurant">
           <p><a href='https://www.facebook.com/thepeacockbistro'>Peacock Bistro</a> is a cute and delicious place.</p>
 
         </div>
-
       </div>
-      <div>
 
+      <div>
         <h2>Photos</h2>
 
         
@@ -381,7 +422,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Feels like home"
-            srcset="/imgs/citynorth-1-360.jpg 360w, /imgs/citynorth-1-720.jpg 720w, /imgs/citynorth-1-1080.jpg 1080w, /imgs/citynorth-1-1440.jpg 1440w, /imgs/citynorth-1-1800.jpg 1800w, /imgs/citynorth-1-2160.jpg 2160w">
+            srcset="/imgs/citynorth-1-360.jpg 360w, /imgs/citynorth-1-720.jpg 720w, /imgs/citynorth-1-1080.jpg 1080w, /imgs/citynorth-1-1440.jpg 1440w, /imgs/citynorth-1-1800.jpg 1800w">
           </amp-img>
           <figcaption>Feels like home</figcaption>
         </figure>
@@ -396,7 +437,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Claim the stairs to get to the bar"
-            srcset="/imgs/citynorth-2-360.jpg 360w, /imgs/citynorth-2-720.jpg 720w, /imgs/citynorth-2-1080.jpg 1080w, /imgs/citynorth-2-1440.jpg 1440w, /imgs/citynorth-2-1800.jpg 1800w, /imgs/citynorth-2-2160.jpg 2160w">
+            srcset="/imgs/citynorth-2-360.jpg 360w, /imgs/citynorth-2-720.jpg 720w, /imgs/citynorth-2-1080.jpg 1080w, /imgs/citynorth-2-1440.jpg 1440w, /imgs/citynorth-2-1800.jpg 1800w">
           </amp-img>
           <figcaption>Claim the stairs to get to the bar</figcaption>
         </figure>
@@ -411,7 +452,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": staff at work"
-            srcset="/imgs/citynorth-3-360.jpg 360w, /imgs/citynorth-3-720.jpg 720w, /imgs/citynorth-3-1080.jpg 1080w, /imgs/citynorth-3-1440.jpg 1440w, /imgs/citynorth-3-1800.jpg 1800w, /imgs/citynorth-3-2160.jpg 2160w">
+            srcset="/imgs/citynorth-3-360.jpg 360w, /imgs/citynorth-3-720.jpg 720w, /imgs/citynorth-3-1080.jpg 1080w, /imgs/citynorth-3-1440.jpg 1440w, /imgs/citynorth-3-1800.jpg 1800w">
           </amp-img>
           <figcaption>staff at work</figcaption>
         </figure>
@@ -426,7 +467,7 @@
             sizes="(min-width: 800px) 800px, 100vw"
             layout="responsive"
             alt=": Beautiful drinks"
-            srcset="/imgs/citynorth-4-360.jpg 360w, /imgs/citynorth-4-720.jpg 720w, /imgs/citynorth-4-1080.jpg 1080w, /imgs/citynorth-4-1440.jpg 1440w, /imgs/citynorth-4-1800.jpg 1800w, /imgs/citynorth-4-2160.jpg 2160w">
+            srcset="/imgs/citynorth-4-360.jpg 360w, /imgs/citynorth-4-720.jpg 720w, /imgs/citynorth-4-1080.jpg 1080w, /imgs/citynorth-4-1440.jpg 1440w, /imgs/citynorth-4-1800.jpg 1800w">
           </amp-img>
           <figcaption>Beautiful drinks</figcaption>
         </figure>
@@ -434,26 +475,32 @@
         
 
       </div>
+
       <footer>
-        2018 | The Bootleggers List
-      </footer>
+  <p>2018</p>
+  <p><a class="nounderline" href="/">The Bootleggers List</a></p>
+  <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
+</footer>
+
+
     </main>
 
     <amp-analytics type="googleanalytics">
-      <script type="application/json">
-        {
-          "vars": {
-            "account": "UA-112181634-1"
-          },
-            "triggers": {
-              "trackPageview": {
-                "on": "visible",
-                  "request": "pageview"
-              }
-            }
+  <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-112181634-1"
+      },
+        "triggers": {
+          "trackPageview": {
+            "on": "visible",
+              "request": "pageview"
+          }
         }
-      </script>
-    </amp-analytics>
+    }
+  </script>
+</amp-analytics>
+
 
   </body>
 </html>
