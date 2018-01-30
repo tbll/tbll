@@ -3,7 +3,7 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mozi - Best Bars in taipei</title>
+    <title>Mozi - Part Of The Top 10 Best Bars in taipei</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="canonical" href="https://thebootleggerslist.com/taipei/mozi.html">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -75,6 +75,8 @@
 
 * { box-sizing: border-box }
 a, a:visited { color: inherit }
+
+blockquote { margin: 0; }
 
 html {
   background-color: #11161C;
@@ -209,25 +211,26 @@ header > .backicon:after {
         margin: 5vh auto 0;
       }
 
-      #restaurant, #hours, #review, #name, #tblldesc, #summary { padding: 2rem; }
+      #restaurant, #hours, #content, #name, #tblldesc { padding: 2rem; }
 
-      #name, #tblldesc, #summary {
+      #name, #tblldesc, #quote {
         text-align: center;
       }
 
-      #summary {
+      #quote {
         border-width: 1px 0;
         border-color: #BD975E;
         border-style: solid;
         margin: 0 2rem;
+        padding: 2rem 0;
       }
       @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-        #summary {
+        #quote {
           border-width: 0.5px 0;
         }
       }
 
-      #review {
+      #content {
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -259,7 +262,7 @@ header > .backicon:after {
         }
       }
 
-      #review.hidereview:before {
+      .hidereview:before {
         content: "";
         position: absolute;
         top: 0;
@@ -269,7 +272,7 @@ header > .backicon:after {
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.001), #11161C);
       }
 
-      #review.hidereview {
+      .hidereview {
         height: 20vh;
       }
 
@@ -290,6 +293,10 @@ header > .backicon:after {
 
       figcaption {
         text-align: center;
+      }
+
+      .intro {
+        font-style: italic;
       }
 
       #hours {
@@ -373,7 +380,7 @@ header > .backicon:after {
 
       <h1 id="name">Mozi</h1>
 
-      <p id="summary">"A quirky collage of contrasts and surprises."</p>
+      <blockquote id="quote">"A quirky collage of contrasts and surprises."</blockquote>
 
       <p id="tblldesc">
         Mozi is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="capitalize">taipei</span>.
@@ -400,11 +407,16 @@ header > .backicon:after {
       </div>
 
       <h2>Review</h2>
-      <div id="review" class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
-        <p>
+      <div id="content">
+        <p class="intro">
+          We reviewed more that 100 cocktails bars in Taipei.
+          We selected the <a href="/">Top 10 bars</a> in the city that we believe have the
+          best drinks, the best staff, and the best venue.
+        </p>
+        <div class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
           <p>Hidden behind “one of the bookshelves” in a hair salon, Mozi might trick you into believing that just it’s another speakeasy-style bar in town, but once you push through the “right door,” you’ll soon find yourself in a spacious bar with elegant lounge areas and a pub-like vibe. The crowd is young, the music is loud and people smoke inside…it makes you wonder, is this really the right place to get some kicking cocktails? Don’t worry, even with that punk look, Mozi’s bartenders are as professional and talented as you would expect from a classy cocktail bar. Let their creativity run wild and their sexy cocktails will open all your senses. If you have time, we recommend coming earlier and take a look at the food menu first – Mozi has some of the best bar food you can find in Taipei.</p>
 
-        </p>
+        </div>
       </div>
       <div class="collapsebutton">
         <span role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</span>
