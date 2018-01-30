@@ -37,8 +37,12 @@
 a, a:visited { color: inherit }
 
 html {
-  background-color: white;
-  color: black;
+  background-color: #11161C;
+  color: #BD975E;
+}
+
+th {
+  font-weight: normal;
 }
 
 .cambriaready body {
@@ -49,7 +53,7 @@ main {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  background-color: white;
+  background-color: #11161C;
 }
 
 footer {
@@ -60,7 +64,7 @@ footer {
 }
 
 h1 {
-  font-size: 1rem;
+  font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
   white-space: pre;
@@ -68,6 +72,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-weight: normal;
   text-transform: uppercase;
   margin: 2rem 0;
   letter-spacing: 2px;
@@ -93,9 +98,9 @@ header > .backtext {
   display: block;
   width: 100%;
   letter-spacing: 2px;
-  background: white;
+  background: #11161C;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #BD975E;
   text-transform: uppercase;
   line-height: 4rem;
   padding: 0 3rem;
@@ -107,7 +112,7 @@ header > .backtext {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
   header > .backtext {
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid #BD975E;
   }
 }
 
@@ -128,7 +133,12 @@ header > .backicon:after {
   height: 1rem;
   display: block;
   transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
+  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+}
+
+.headerscrollouttrigger {
+  width: 20vw;
+  pointer-events: none;
 }
 
 @media (min-width: 800px) {
@@ -148,6 +158,10 @@ header > .backicon:after {
     right: 50%;
     margin-right: -400px;
   }
+}
+
+[role=button] {
+  cursor: pointer;
 }
 
 

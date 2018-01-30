@@ -13,6 +13,12 @@
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 
+    <script>
+      setTimeout(() => {
+        // window.location.reload();
+      }, 10000);
+    </script>
+
         <!-- Generated with https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
@@ -47,25 +53,7 @@
         },
         "review": {
           "author": "The Bootleggers Taipei",
-          "reviewBody": "&lt;p&gt;Grandiose place!&lt;/p&gt;
-
-&lt;p&gt;People say it&amp;#8217;s a restaurant with delicious cocktails. We would argue that it&amp;#8217;s an incredible bar that happens to have the most talented cook!&lt;/p&gt;
-
-&lt;p&gt;My recommendation for the food is to just order tons of starters. They all are amazing (I recommend the shrimp sliders). The entries are great too, but I&amp;#8217;d rather get stuffed with the starters.&lt;/p&gt;
-
-&lt;p&gt;As for the cocktails - they have so many layers. Got for the Penicilin first. You&amp;#8217;ll understand what I mean by layers. One, two and three waves of different tastes. &amp;quot;Controlled complexity&amp;quot;. Want more body? Try their Midnight Oil.&lt;/p&gt;
-
-&lt;p&gt;If you want to have dinner there, eat at the bar, or try to get the japanese-style table in the left corner.&lt;/p&gt;
-
-&lt;p&gt;The staff will remember your name and even what you ordered last time. They pay special attention to you to make sure you feel like at home.&lt;/p&gt;
-
-&lt;p&gt;From facebook:&lt;/p&gt;
-
-&lt;p&gt;Longtail餐廳酒吧提供美味創意料理與酒飲，親切服務及溫暖氛圍，讓客人自在體現絢爛台北夜生活，是聚會及用餐的好去處。林明健主廚運用當季食材，結合多國料理手法及創意，呈現無國界當代料理；酒單則提供精品葡萄酒、精釀啤酒及創意調酒，滿足您不同需求。 Longtail位於台北市區，晚餐及宵夜時段營業，您可選擇各式風格的座位區域，包括舒適溫馨的沙發區、吧檯、或靠近廚房的座位捕捉廚師料理時的認真樣貌。本餐廳接受訂位，也歡迎沒有提前計畫或預約的客人及國外旅客，Longtail希望打造一處有如家一般，讓人感覺輕鬆、自在、難忘的空間。&lt;/p&gt;
-
-&lt;p&gt;Longtail is a neighborhood gathering place that embodies the sophisticated yet relaxed Taipei lifestyle with great food and drinks, understated service, and a warm inviting setting. The seasonal menu features contemporary cuisine with global flavors and a rotating list of boutique wines, craft beers, and exciting cocktails. Whatever you’re craving, our staff is there to help create the perfect dining experience.&lt;/p&gt;
-
-&lt;p&gt;Conveniently located in downtown Taipei, Longtail is open late every night and offers a variety of seating choices including cozy lounge, bar counter, and standard tables close enough to the kitchen to catch all the action. We accept reservations, but our door is always open to walk-ins, wayfarers, and anyone else who doesn’t believe in planning. Our goal is to make Longtail a second home where guests can visit at anytime to feel stimulated, welcomed, and remembered.&lt;/p&gt;
+          "reviewBody": "&lt;p&gt;People say it&amp;#8217;s a restaurant with delicious cocktails, but we’d argue that it&amp;#8217;s an incredible bar that happens to have the most talented cook! Run by Hong Kong-born celebrity chef Kin, Longtail has some of the best original dishes and smartly crafted cocktails in town. We strongly recommend ordering as many starters as you can (don’t miss the shrimp sliders!) to explore chef Kin’s pallet of interesting food combinations. That said, the cocktails here are as extraordinary as the food. Longtail’s Penicillin will guide your taste bud through a philosophical meditation of layers, while Midnight Oil will show you the art of controlled complexity. The staff are another reason which keeps us coming back - they always remember our names and what we ordered last time!&lt;/p&gt;
 ",
           "reviewRating": {
             "ratingValue": "5",
@@ -89,8 +77,12 @@
 a, a:visited { color: inherit }
 
 html {
-  background-color: white;
-  color: black;
+  background-color: #11161C;
+  color: #BD975E;
+}
+
+th {
+  font-weight: normal;
 }
 
 .cambriaready body {
@@ -101,7 +93,7 @@ main {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  background-color: white;
+  background-color: #11161C;
 }
 
 footer {
@@ -112,7 +104,7 @@ footer {
 }
 
 h1 {
-  font-size: 1rem;
+  font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
   white-space: pre;
@@ -120,6 +112,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-weight: normal;
   text-transform: uppercase;
   margin: 2rem 0;
   letter-spacing: 2px;
@@ -145,9 +138,9 @@ header > .backtext {
   display: block;
   width: 100%;
   letter-spacing: 2px;
-  background: white;
+  background: #11161C;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #BD975E;
   text-transform: uppercase;
   line-height: 4rem;
   padding: 0 3rem;
@@ -159,7 +152,7 @@ header > .backtext {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
   header > .backtext {
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid #BD975E;
   }
 }
 
@@ -180,7 +173,12 @@ header > .backicon:after {
   height: 1rem;
   display: block;
   transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
+  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+}
+
+.headerscrollouttrigger {
+  width: 20vw;
+  pointer-events: none;
 }
 
 @media (min-width: 800px) {
@@ -202,20 +200,63 @@ header > .backicon:after {
   }
 }
 
-      
-      #content {
-        clear: both;
+[role=button] {
+  cursor: pointer;
+}
+
+
+      #award {
+        margin: 5vh auto 0;
       }
 
-      .togglehours {
-        cursor: pointer;
+      #restaurant, #hours, #review, #name, #tblldesc, #summary { padding: 2rem; }
+
+      #name, #tblldesc, #summary {
+        text-align: center;
+      }
+
+      #summary {
+        border-width: 1px 0;
+        border-color: #BD975E;
+        border-style: solid;
+        margin: 0 2rem;
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        #summary {
+          border-width: 0.5px 0;
+        }
       }
 
       #review {
         position: relative;
-        padding: 0 1rem;
         overflow: hidden;
         width: 100%;
+      }
+
+      #buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      #buttons > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 3rem;
+        width: 30%;
+        white-space: nowrap;
+        border-width: 1px;
+        border-color: #BD975E;
+        border-style: solid;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        #buttons > div {
+          border-width: 0.5px;
+        }
       }
 
       #review.hidereview:before {
@@ -225,7 +266,7 @@ header > .backicon:after {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), white);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.001), #11161C);
       }
 
       #review.hidereview {
@@ -238,7 +279,7 @@ header > .backicon:after {
       }
 
       .collapsebutton > span {
-        border: 1px solid black;
+        border: 1px solid #BD975E;
         padding: 0.5rem 2rem;
         border-radius: 10px;
       }
@@ -251,44 +292,12 @@ header > .backicon:after {
         text-align: center;
       }
 
-      #meta {
-        width: 100%;
-        padding: 20px 6px;
-      }
-
-      #award {
-        float: right;
-        width: 30%;
-        border: 1px solid black;
-        margin: 0 0 0 6px;
-        overflow: hidden;
-      }
-
-      .button {
-        padding: 0 3px;
-        border-radius: 3px;
-        background-color: black;
-        color: white;
-        white-space: nowrap;
-        line-height: 2rem;
-      }
-
-      .headerscrollouttrigger {
-        width: 20vw;
-        pointer-events: none;
-      }
-
-      .restaurant {
-        padding: 1rem;
-      }
-
-      .hours {
+      #hours {
         clear: both;
         text-align: left;
-        padding: 10px;
       }
 
-      .hours > table > tbody > tr > th:first-of-type {
+      #hours > table > tbody > tr > th:first-of-type {
         padding-right: 20px;
       }
 
@@ -345,140 +354,133 @@ header > .backicon:after {
 </header>
 
 
-      <div id="intro">
-        <amp-img id="cover" src='/imgs/longtail-0-720.jpg'
-          width='720' height='480'
+      <amp-img id="cover"
+        src='/imgs/longtail-0-720.jpg'
+        width='800' height='600'
+        sizes="(min-width: 800px) 800px, 100vw"
+        layout="responsive"
+        alt="Longtail"
+        srcset="/imgs/longtail-0-360.jpg 360w, /imgs/longtail-0-720.jpg 720w, /imgs/longtail-0-1080.jpg 1080w, /imgs/longtail-0-1440.jpg 1440w, /imgs/longtail-0-1800.jpg 1800w">
+      </amp-img>
+
+      <amp-img id="award"
+        src='/assets/imgs/award.png'
+        width='1293'
+        height='1594'
+        sizes="(min-width: 800px) 240px, 50vw"
+        alt="Longtail is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
+      </amp-img>
+
+      <h1 id="name">Longtail</h1>
+
+      <p id="summary">"A perfect combination of funky cocktails and exquisite fusion cuisine."</p>
+
+      <p id="tblldesc">
+        Longtail is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="capitalize">taipei</span>.
+      </p>
+
+      <div id="buttons">
+        <div><a class="nounderline" target="_blank" href="https://www.facebook.com/longtail.taipei/">Longtail<br>on facebook</a></div>
+        <div><a class="nounderline"  target="_blank" href="https://maps.google.com/?cid=4814859082437415695">map</a></div>
+        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show<br>opening hours</div>
+      </div>
+
+      <div id="hours" hidden [hidden]="pagestate.hidehours">
+        <table>
+          <tbody>
+            <tr><th>Monday</th><th>6:00 PM – 2:00 AM</th></tr>
+            <tr><th>Tuesday</th><th>Closed</th></tr>
+            <tr><th>Wednesday</th><th>6:00 PM – 2:00 AM</th></tr>
+            <tr><th>Thursday</th><th>6:00 PM – 3:00 AM</th></tr>
+            <tr><th>Friday</th><th>6:00 PM – 3:00 AM</th></tr>
+            <tr><th>Saturday</th><th>6:00 PM – 3:00 AM</th></tr>
+            <tr><th>Sunday</th><th>6:00 PM – 2:00 AM</th></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Review</h2>
+      <div id="review" class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
+        <p>
+          <p>People say it&#8217;s a restaurant with delicious cocktails, but we’d argue that it&#8217;s an incredible bar that happens to have the most talented cook! Run by Hong Kong-born celebrity chef Kin, Longtail has some of the best original dishes and smartly crafted cocktails in town. We strongly recommend ordering as many starters as you can (don’t miss the shrimp sliders!) to explore chef Kin’s pallet of interesting food combinations. That said, the cocktails here are as extraordinary as the food. Longtail’s Penicillin will guide your taste bud through a philosophical meditation of layers, while Midnight Oil will show you the art of controlled complexity. The staff are another reason which keeps us coming back - they always remember our names and what we ordered last time!</p>
+
+        </p>
+      </div>
+      <div class="collapsebutton">
+        <span role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</span>
+      </div>
+
+      <h2>Restaurant suggestion</h2>
+      <div id="restaurant">
+        <p>Eat at Longtail.</p>
+
+      </div>
+
+      <h2>Photos</h2>
+
+      
+      
+      
+      
+      <figure>
+        <amp-img
+          src='/imgs/longtail-1-720.jpg'
+          width='800'
+          height='600'
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
-          alt="Longtail"
-          srcset="/imgs/longtail-0-360.jpg 360w, /imgs/longtail-0-720.jpg 720w, /imgs/longtail-0-1080.jpg 1080w, /imgs/longtail-0-1440.jpg 1440w, /imgs/longtail-0-1800.jpg 1800w">
+          alt=": Private room"
+          srcset="/imgs/longtail-1-360.jpg 360w, /imgs/longtail-1-720.jpg 720w, /imgs/longtail-1-1080.jpg 1080w, /imgs/longtail-1-1440.jpg 1440w, /imgs/longtail-1-1800.jpg 1800w">
         </amp-img>
-        <div id="meta">
-          <div id="award">
-            <a class="nounderline" href="/">
-              <amp-img
-                src='/assets/imgs/award.png'
-                width='600'
-                height='671'
-                sizes="(min-width: 800px) 240px, 30vw"
-                alt="Longtail is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
-              </amp-img>
-            </a>
-          </div>
-          <h1 class="name">Longtail</h1>
-          <p class="summary">"Incredible food. Incredible cocktails."</p>
-          <p>Longtail is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="capitalize">taipei</span>.</p>
-          <p>
-            <span class="button"><a class="nounderline" target="_blank" href="https://www.facebook.com/longtail.taipei/">Longtail on facebook</a></span>
-            <span class="button"><a class="nounderline"  target="_blank" href="https://maps.google.com/?cid=4814859082437415695">map</a></span>
-            <span class="button togglehours" role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</span>
-          </p>
-
-          <div class="hours" hidden [hidden]="pagestate.hidehours">
-            <table>
-              <tbody>
-                <tr><th>Monday</th><th>6:00 PM – 2:00 AM</th></tr>
-                <tr><th>Tuesday</th><th>Closed</th></tr>
-                <tr><th>Wednesday</th><th>6:00 PM – 2:00 AM</th></tr>
-                <tr><th>Thursday</th><th>6:00 PM – 3:00 AM</th></tr>
-                <tr><th>Friday</th><th>6:00 PM – 3:00 AM</th></tr>
-                <tr><th>Saturday</th><th>6:00 PM – 3:00 AM</th></tr>
-                <tr><th>Sunday</th><th>6:00 PM – 2:00 AM</th></tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div>
-      </div>
-
-      <div id="content">
-        <h2>Review</h2>
-        <div id="review" class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum leo ipsum, porttitor fringilla lectus pretium in. Duis ultricies bibendum elit, nec fringilla sem pharetra a. Pellentesque rutrum dignissim elit, sed porttitor lectus commodo ut. Nunc non euismod augue. Suspendisse porta magna sed nisi consectetur suscipit. Donec convallis, quam a cursus lobortis, erat velit vehicula neque, sed feugiat libero ante at velit. Suspendisse eleifend lacus ut velit vulputate, ut posuere ex ornare. Pellentesque quis lacus vel ante laoreet eleifend. Donec faucibus vehicula diam, a posuere ex eleifend ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in leo mollis nisl tempus vulputate at eget elit. Donec mattis eros elementum vulputate condimentum. Aenean vel ex sed diam lacinia lacinia. Nulla eget urna id risus consectetur maximus in in mauris. Curabitur in euismod risus, quis lobortis nunc. Nunc cursus sodales rutrum. Nulla aliquam cursus nisl a placerat. Maecenas ac odio ac risus aliquam commodo. Morbi pharetra urna quis lectus vehicula, sit amet convallis mi elementum. Proin ac maximus justo. Pellentesque aliquam gravida metus sed tincidunt. Suspendisse quam erat, vestibulum in porttitor sed, volutpat sed metus. Donec mattis metus lectus, at molestie tellus commodo pulvinar. Nunc non.
-          </p>
-        </div>
-        <div class="collapsebutton">
-          <span role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</span>
-        </div>
-      </div>
-
-      <div>
-        <h2>Restaurant suggestion</h2>
-        <div class="restaurant">
-          <p>Eat at Longtail.</p>
-
-        </div>
-      </div>
-
-      <div>
-        <h2>Photos</h2>
-
-        
-        
-        
-        
-        <figure>
-          <amp-img
-            src='/imgs/longtail-1-720.jpg'
-            width='720'
-            height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
-            layout="responsive"
-            alt=": Private room"
-            srcset="/imgs/longtail-1-360.jpg 360w, /imgs/longtail-1-720.jpg 720w, /imgs/longtail-1-1080.jpg 1080w, /imgs/longtail-1-1440.jpg 1440w, /imgs/longtail-1-1800.jpg 1800w">
-          </amp-img>
-          <figcaption>Private room</figcaption>
-        </figure>
-        
-        
-        
-        <figure>
-          <amp-img
-            src='/imgs/longtail-2-720.jpg'
-            width='720'
-            height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
-            layout="responsive"
-            alt=": Classy and cosy atmosphere"
-            srcset="/imgs/longtail-2-360.jpg 360w, /imgs/longtail-2-720.jpg 720w, /imgs/longtail-2-1080.jpg 1080w, /imgs/longtail-2-1440.jpg 1440w, /imgs/longtail-2-1800.jpg 1800w">
-          </amp-img>
-          <figcaption>Classy and cosy atmosphere</figcaption>
-        </figure>
-        
-        
-        
-        <figure>
-          <amp-img
-            src='/imgs/longtail-3-720.jpg'
-            width='720'
-            height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
-            layout="responsive"
-            alt=": Amazing food…"
-            srcset="/imgs/longtail-3-360.jpg 360w, /imgs/longtail-3-720.jpg 720w, /imgs/longtail-3-1080.jpg 1080w, /imgs/longtail-3-1440.jpg 1440w, /imgs/longtail-3-1800.jpg 1800w">
-          </amp-img>
-          <figcaption>Amazing food…</figcaption>
-        </figure>
-        
-        
-        
-        <figure>
-          <amp-img
-            src='/imgs/longtail-4-720.jpg'
-            width='720'
-            height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
-            layout="responsive"
-            alt=": and incredible cocktails."
-            srcset="/imgs/longtail-4-360.jpg 360w, /imgs/longtail-4-720.jpg 720w, /imgs/longtail-4-1080.jpg 1080w, /imgs/longtail-4-1440.jpg 1440w, /imgs/longtail-4-1800.jpg 1800w">
-          </amp-img>
-          <figcaption>and incredible cocktails.</figcaption>
-        </figure>
-        
-        
-
-      </div>
+        <figcaption>Private room</figcaption>
+      </figure>
+      
+      
+      
+      <figure>
+        <amp-img
+          src='/imgs/longtail-2-720.jpg'
+          width='800'
+          height='600'
+          sizes="(min-width: 800px) 800px, 100vw"
+          layout="responsive"
+          alt=": Classy and cosy atmosphere"
+          srcset="/imgs/longtail-2-360.jpg 360w, /imgs/longtail-2-720.jpg 720w, /imgs/longtail-2-1080.jpg 1080w, /imgs/longtail-2-1440.jpg 1440w, /imgs/longtail-2-1800.jpg 1800w">
+        </amp-img>
+        <figcaption>Classy and cosy atmosphere</figcaption>
+      </figure>
+      
+      
+      
+      <figure>
+        <amp-img
+          src='/imgs/longtail-3-720.jpg'
+          width='800'
+          height='600'
+          sizes="(min-width: 800px) 800px, 100vw"
+          layout="responsive"
+          alt=": Amazing food…"
+          srcset="/imgs/longtail-3-360.jpg 360w, /imgs/longtail-3-720.jpg 720w, /imgs/longtail-3-1080.jpg 1080w, /imgs/longtail-3-1440.jpg 1440w, /imgs/longtail-3-1800.jpg 1800w">
+        </amp-img>
+        <figcaption>Amazing food…</figcaption>
+      </figure>
+      
+      
+      
+      <figure>
+        <amp-img
+          src='/imgs/longtail-4-720.jpg'
+          width='800'
+          height='600'
+          sizes="(min-width: 800px) 800px, 100vw"
+          layout="responsive"
+          alt=": … and incredible cocktails."
+          srcset="/imgs/longtail-4-360.jpg 360w, /imgs/longtail-4-720.jpg 720w, /imgs/longtail-4-1080.jpg 1080w, /imgs/longtail-4-1440.jpg 1440w, /imgs/longtail-4-1800.jpg 1800w">
+        </amp-img>
+        <figcaption>… and incredible cocktails.</figcaption>
+      </figure>
+      
+      
 
       <footer>
   <p>2018</p>
