@@ -13,24 +13,17 @@
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+    <!-- <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script> -->
 
-    <script>
-      setTimeout(() => {
-        // window.location.reload();
-      }, 10000);
-    </script>
-
-        <!-- Generated with https://realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icons/manifest.json">
-    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-    <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#151c22">
-
-
+    <!-- Generated with https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/manifest.json">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#151c22">
 
 
     <!-- FIXME: any change here needs to be done in list.html as well -->
@@ -56,7 +49,7 @@
         },
         "review": {
           "author": "The Bootleggers Taipei",
-          "reviewBody": "&lt;p&gt;The name says it all. At Ginspiration, gin is the one and the only inspiration behind all drinks. The intimate “gin-only” bar is tucked away on the third floor of an old building on Dihua Street, the hub of Chinese medicine and dried herbs, reminding people of the origin of gin. Ginspiration is a tiny place, but big enough for you to explore the complexity and subtlety of gin. Former gin seller Perry, who&amp;#8217;s also your bartender of the night, knows best how to give his favourite liquor a twist with a slice of roasted tomato or a big cocoa shell; you’ll soon find out that a simple martini can’t make the best gin justice. Gin inspired Perry to open Ginspiration; Ginspiration inspired us to create this website. And now, it’s time for you to discover the power of gin!&lt;/p&gt;
+          "reviewBody": "&lt;p&gt;The name says it all. At Ginspiration, gin is the one and only inspiration behind all drinks. Tucked away on the third floor of an old building, the intimate “gin-only” bar may be too small to be noticed, but definitely not too small for you to explore the complexity and subtlety of gin. Former gin seller Perry, who&amp;#8217;s also your bartender of the night, knows best how to give his favourite liquor a twist with a slice of roasted tomato or a big cacao shell; you’ll soon find out that a simple martini can’t make the best gin justice. Gin inspired Perry to open Ginspiration; Ginspiration inspired us to create this website. And now, it’s time for you to discover the great potential of gin.&lt;/p&gt;
 ",
           "reviewRating": {
             "ratingValue": "5",
@@ -82,8 +75,8 @@ a, a:visited { color: inherit }
 blockquote { margin: 0; }
 
 html {
-  background-color: #11161C;
-  color: #BD975E;
+  background-color: white;
+  color: black;
 }
 
 th {
@@ -98,7 +91,7 @@ main {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  background-color: #11161C;
+  background-color: white;
 }
 
 footer {
@@ -109,10 +102,10 @@ footer {
 }
 
 h1 {
+  text-align: center;
   font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: pre;
 }
 
 h2 {
@@ -131,7 +124,7 @@ h2 {
   text-decoration: none;
 }
 
-header {
+#backheader {
   position: fixed;
   left: 0;
   top: 0;
@@ -139,13 +132,13 @@ header {
   z-index: 999;
 }
 
-header > .backtext {
+#backheader > .backtext {
   display: block;
   width: 100%;
   letter-spacing: 2px;
-  background: #11161C;
+  background: white;
   text-align: center;
-  border-bottom: 1px solid #BD975E;
+  border-bottom: 1px solid black;
   text-transform: uppercase;
   line-height: 4rem;
   padding: 0 3rem;
@@ -156,12 +149,12 @@ header > .backtext {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  header > .backtext {
-    border-bottom: 0.5px solid #BD975E;
+  #backheader > .backtext {
+    border-bottom: 0.5px solid black;
   }
 }
 
-header > .backicon {
+#backheader > .backicon {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -169,7 +162,7 @@ header > .backicon {
   height: 2rem;
 }
 
-header > .backicon:after {
+#backheader > .backicon:after {
   content: "";
   position: absolute;
   left: 0.5rem;
@@ -178,10 +171,10 @@ header > .backicon:after {
   height: 1rem;
   display: block;
   transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
 }
 
-.headerscrollouttrigger {
+#headerscrollouttrigger {
   width: 20vw;
   pointer-events: none;
 }
@@ -197,7 +190,7 @@ header > .backicon:after {
   .name {
     font-size: 2rem;
   }
-  header {
+  #backheader {
     width: 800px;
     margin: auto;
     right: 50%;
@@ -209,20 +202,63 @@ header > .backicon:after {
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 30%;
+  padding: 4px;
+  border-width: 1px;
+  border-color: ;
+  border-style: solid;
+  font-size: 12px;
+  border-radius: 3px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .buttons > div {
+    border-width: 0.5px;
+  }
+}
+
+
 
       #award {
         margin: 5vh auto 0;
       }
 
-      #restaurant, #hours, #content, #name, #tblldesc { padding: 2rem; }
+      #restaurant, #hours, #content, #name, #tblldesc {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .buttons, #quote, #restaurant, #hours, #content, #name, #tblldesc {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
 
       #name, #tblldesc, #quote {
         text-align: center;
       }
 
+      #name {
+        white-space: pre;
+      }
+
       #quote {
         border-width: 1px 0;
-        border-color: #BD975E;
+        border-color: black;
         border-style: solid;
         margin: 0 2rem;
         padding: 2rem 0;
@@ -239,32 +275,6 @@ header > .backicon:after {
         width: 100%;
       }
 
-      #buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-      }
-
-      #buttons > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 3rem;
-        width: 30%;
-        white-space: nowrap;
-        border-width: 1px;
-        border-color: #BD975E;
-        border-style: solid;
-        font-size: 12px;
-        border-radius: 3px;
-      }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-        #buttons > div {
-          border-width: 0.5px;
-        }
-      }
-
       .hidereview:before {
         content: "";
         position: absolute;
@@ -272,23 +282,25 @@ header > .backicon:after {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.001), #11161C);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), white);
       }
 
       .hidereview {
         height: 20vh;
       }
 
+      /*
       .collapsebutton {
         padding: 1rem;
         text-align: center;
       }
 
       .collapsebutton > span {
-        border: 1px solid #BD975E;
+        border: 1px solid black;
         padding: 0.5rem 2rem;
         border-radius: 10px;
       }
+      */
 
       figure {
         margin: 0 0 1rem 0;
@@ -326,10 +338,6 @@ header > .backicon:after {
       </script>
     </amp-state>
 
-    <div class="headerscrollouttrigger">
-      <amp-position-observer on="exit:showheader.start enter:hideheader.start" layout="nodisplay"></amp-position-observer>
-    </div>
-
     <main>
 
       <amp-animation id="showheader" layout="nodisplay">
@@ -358,7 +366,11 @@ header > .backicon:after {
   </script>
 </amp-animation>
 
-<header>
+<div id="headerscrollouttrigger">
+  <amp-position-observer on="exit:showheader.start enter:hideheader.start" layout="nodisplay"></amp-position-observer>
+</div>
+
+<header id="backheader">
   <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
   <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to list"></a>
 </header>
@@ -366,13 +378,78 @@ header > .backicon:after {
 
       <amp-img id="cover"
         src='/imgs/ginspiration-0-720.jpg'
-        width='800' height='600'
+        width='720' height='480'
         sizes="(min-width: 800px) 800px, 100vw"
         layout="responsive"
         alt="Ginspiration
 發琴吧"
         srcset="/imgs/ginspiration-0-360.jpg 360w, /imgs/ginspiration-0-720.jpg 720w, /imgs/ginspiration-0-1080.jpg 1080w, /imgs/ginspiration-0-1440.jpg 1440w, /imgs/ginspiration-0-1800.jpg 1800w">
       </amp-img>
+
+      <!-- <amp-carousel -->
+      <!--   width='720' height='480' -->
+      <!--   layout="responsive" -->
+      <!--   loop -->
+      <!--   autoplay -->
+      <!--   delay="3000" -->
+      <!--   type="slides"> -->
+      <!--    -->
+      <!--     <amp-img -->
+      <!--       src='/imgs/ginspiration-0-720.jpg' -->
+      <!--       width='720' -->
+      <!--       height='480' -->
+      <!--       sizes="(min-width: 800px) 800px, 100vw" -->
+      <!--       layout="responsive" -->
+      <!--       alt=": Perry at work" -->
+      <!--       srcset="/imgs/ginspiration-0-360.jpg 360w, /imgs/ginspiration-0-720.jpg 720w, /imgs/ginspiration-0-1080.jpg 1080w, /imgs/ginspiration-0-1440.jpg 1440w, /imgs/ginspiration-0-1800.jpg 1800w"> -->
+      <!--     </amp-img> -->
+      <!--    -->
+      <!--     <amp-img -->
+      <!--       src='/imgs/ginspiration-1-720.jpg' -->
+      <!--       width='720' -->
+      <!--       height='480' -->
+      <!--       sizes="(min-width: 800px) 800px, 100vw" -->
+      <!--       layout="responsive" -->
+      <!--       alt=": The work of Perry" -->
+      <!--       srcset="/imgs/ginspiration-1-360.jpg 360w, /imgs/ginspiration-1-720.jpg 720w, /imgs/ginspiration-1-1080.jpg 1080w, /imgs/ginspiration-1-1440.jpg 1440w, /imgs/ginspiration-1-1800.jpg 1800w"> -->
+      <!--     </amp-img> -->
+      <!--    -->
+      <!--     <amp-img -->
+      <!--       src='/imgs/ginspiration-2-720.jpg' -->
+      <!--       width='479' -->
+      <!--       height='720' -->
+      <!--       sizes="(min-width: 800px) 800px, 100vw" -->
+      <!--       layout="responsive" -->
+      <!--       alt=": Go up the third floor" -->
+      <!--       srcset="/imgs/ginspiration-2-360.jpg 360w, /imgs/ginspiration-2-720.jpg 720w, /imgs/ginspiration-2-1080.jpg 1080w, /imgs/ginspiration-2-1440.jpg 1440w, /imgs/ginspiration-2-1800.jpg 1800w"> -->
+      <!--     </amp-img> -->
+      <!--    -->
+      <!--     <amp-img -->
+      <!--       src='/imgs/ginspiration-3-720.jpg' -->
+      <!--       width='720' -->
+      <!--       height='480' -->
+      <!--       sizes="(min-width: 800px) 800px, 100vw" -->
+      <!--       layout="responsive" -->
+      <!--       alt=": … behind the red curtain" -->
+      <!--       srcset="/imgs/ginspiration-3-360.jpg 360w, /imgs/ginspiration-3-720.jpg 720w, /imgs/ginspiration-3-1080.jpg 1080w, /imgs/ginspiration-3-1440.jpg 1440w, /imgs/ginspiration-3-1800.jpg 1800w"> -->
+      <!--     </amp-img> -->
+      <!--    -->
+      <!--     <amp-img -->
+      <!--       src='/imgs/ginspiration-4-720.jpg' -->
+      <!--       width='720' -->
+      <!--       height='480' -->
+      <!--       sizes="(min-width: 800px) 800px, 100vw" -->
+      <!--       layout="responsive" -->
+      <!--       alt=": … to find the bar." -->
+      <!--       srcset="/imgs/ginspiration-4-360.jpg 360w, /imgs/ginspiration-4-720.jpg 720w, /imgs/ginspiration-4-1080.jpg 1080w, /imgs/ginspiration-4-1440.jpg 1440w, /imgs/ginspiration-4-1800.jpg 1800w"> -->
+      <!--     </amp-img> -->
+      <!--    -->
+      <!-- </amp-carousel> -->
+
+      <h1 id="name">Ginspiration
+發琴吧</h1>
+
+      <blockquote id="quote">"Everything you need to know about gin."</blockquote>
 
       <amp-img id="award"
         src='/assets/imgs/award.png'
@@ -383,19 +460,14 @@ header > .backicon:after {
 發琴吧 is part of the Bootleggers List, the Top 10 bars of taipei, selection 2018.">
       </amp-img>
 
-      <h1 id="name">Ginspiration
-發琴吧</h1>
-
-      <blockquote id="quote">"Everything you need to know about gin."</blockquote>
-
       <p id="tblldesc">
         Ginspiration is part of <a href="/">The Bootleggers List</a>, the Top 10 Cocktail Bars in <span class="capitalize">taipei</span>.
       </p>
 
-      <div id="buttons">
-        <div><a class="nounderline" target="_blank" href="https://www.facebook.com/ginspirationbar">Ginspiration<br>on facebook</a></div>
-        <div><a class="nounderline"  target="_blank" href="https://maps.google.com/?cid=7600624766056326516">map</a></div>
-        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show<br>opening hours</div>
+      <div class="buttons">
+        <div role="button"><a target="_blank" href="https://www.facebook.com/ginspirationbar">Ginspiration on facebook</a></div>
+        <div role="button"><a target="_blank" href="https://maps.google.com/?cid=7600624766056326516">map</a></div>
+        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</div>
       </div>
 
       <div id="hours" hidden [hidden]="pagestate.hidehours">
@@ -414,18 +486,13 @@ header > .backicon:after {
 
       <h2>Review</h2>
       <div id="content">
-        <p class="intro">
-          We reviewed more that 100 cocktails bars in Taipei.
-          We selected the <a href="/">Top 10 bars</a> in the city that we believe have the
-          best drinks, the best staff, and the best venue.
-        </p>
         <div class="hidereview" [class]="pagestate.hidereview ? 'hidereview' : 'showreview'">
-          <p>The name says it all. At Ginspiration, gin is the one and the only inspiration behind all drinks. The intimate “gin-only” bar is tucked away on the third floor of an old building on Dihua Street, the hub of Chinese medicine and dried herbs, reminding people of the origin of gin. Ginspiration is a tiny place, but big enough for you to explore the complexity and subtlety of gin. Former gin seller Perry, who&#8217;s also your bartender of the night, knows best how to give his favourite liquor a twist with a slice of roasted tomato or a big cocoa shell; you’ll soon find out that a simple martini can’t make the best gin justice. Gin inspired Perry to open Ginspiration; Ginspiration inspired us to create this website. And now, it’s time for you to discover the power of gin!</p>
+          <p>The name says it all. At Ginspiration, gin is the one and only inspiration behind all drinks. Tucked away on the third floor of an old building, the intimate “gin-only” bar may be too small to be noticed, but definitely not too small for you to explore the complexity and subtlety of gin. Former gin seller Perry, who&#8217;s also your bartender of the night, knows best how to give his favourite liquor a twist with a slice of roasted tomato or a big cacao shell; you’ll soon find out that a simple martini can’t make the best gin justice. Gin inspired Perry to open Ginspiration; Ginspiration inspired us to create this website. And now, it’s time for you to discover the great potential of gin.</p>
 
         </div>
       </div>
-      <div class="collapsebutton">
-        <span role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</span>
+      <div class="buttons">
+        <div role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidereview: !pagestate.hidereview}})" [text]="pagestate.hidereview ? 'Read more…' : 'Show less'">Read more…</div>
       </div>
 
       <h2>Restaurant suggestion</h2>
@@ -443,8 +510,8 @@ header > .backicon:after {
       <figure>
         <amp-img
           src='/imgs/ginspiration-1-720.jpg'
-          width='800'
-          height='600'
+          width='720'
+          height='480'
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt=": The work of Perry"
@@ -458,8 +525,8 @@ header > .backicon:after {
       <figure>
         <amp-img
           src='/imgs/ginspiration-2-720.jpg'
-          width='800'
-          height='600'
+          width='479'
+          height='720'
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt=": Go up the third floor"
@@ -473,8 +540,8 @@ header > .backicon:after {
       <figure>
         <amp-img
           src='/imgs/ginspiration-3-720.jpg'
-          width='800'
-          height='600'
+          width='720'
+          height='480'
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt=": … behind the red curtain"
@@ -488,8 +555,8 @@ header > .backicon:after {
       <figure>
         <amp-img
           src='/imgs/ginspiration-4-720.jpg'
-          width='800'
-          height='600'
+          width='720'
+          height='480'
           sizes="(min-width: 800px) 800px, 100vw"
           layout="responsive"
           alt=": … to find the bar."
@@ -501,9 +568,10 @@ header > .backicon:after {
       
 
       <footer>
-  <p>2018</p>
-  <p><a class="nounderline" href="/">The Bootleggers List</a></p>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
 </footer>
 
 

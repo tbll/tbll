@@ -9,18 +9,17 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 
-        <!-- Generated with https://realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icons/manifest.json">
-    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-    <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#151c22">
-
-
+    <!-- Generated with https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/manifest.json">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#151c22">
 
 
     <!-- Validate any change: https://search.google.com/structured-data/testing-tool -->
@@ -54,8 +53,8 @@ a, a:visited { color: inherit }
 blockquote { margin: 0; }
 
 html {
-  background-color: #11161C;
-  color: #BD975E;
+  background-color: white;
+  color: black;
 }
 
 th {
@@ -70,7 +69,7 @@ main {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  background-color: #11161C;
+  background-color: white;
 }
 
 footer {
@@ -81,10 +80,10 @@ footer {
 }
 
 h1 {
+  text-align: center;
   font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: pre;
 }
 
 h2 {
@@ -103,7 +102,7 @@ h2 {
   text-decoration: none;
 }
 
-header {
+#backheader {
   position: fixed;
   left: 0;
   top: 0;
@@ -111,13 +110,13 @@ header {
   z-index: 999;
 }
 
-header > .backtext {
+#backheader > .backtext {
   display: block;
   width: 100%;
   letter-spacing: 2px;
-  background: #11161C;
+  background: white;
   text-align: center;
-  border-bottom: 1px solid #BD975E;
+  border-bottom: 1px solid black;
   text-transform: uppercase;
   line-height: 4rem;
   padding: 0 3rem;
@@ -128,12 +127,12 @@ header > .backtext {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  header > .backtext {
-    border-bottom: 0.5px solid #BD975E;
+  #backheader > .backtext {
+    border-bottom: 0.5px solid black;
   }
 }
 
-header > .backicon {
+#backheader > .backicon {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -141,7 +140,7 @@ header > .backicon {
   height: 2rem;
 }
 
-header > .backicon:after {
+#backheader > .backicon:after {
   content: "";
   position: absolute;
   left: 0.5rem;
@@ -150,10 +149,10 @@ header > .backicon:after {
   height: 1rem;
   display: block;
   transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
 }
 
-.headerscrollouttrigger {
+#headerscrollouttrigger {
   width: 20vw;
   pointer-events: none;
 }
@@ -169,7 +168,7 @@ header > .backicon:after {
   .name {
     font-size: 2rem;
   }
-  header {
+  #backheader {
     width: 800px;
     margin: auto;
     right: 50%;
@@ -181,74 +180,158 @@ header > .backicon:after {
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 30%;
+  padding: 4px;
+  border-width: 1px;
+  border-color: ;
+  border-style: solid;
+  font-size: 12px;
+  border-radius: 3px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .buttons > div {
+    border-width: 0.5px;
+  }
+}
+
+
+
+      header {
+        height: 56px;
+        background-image: url(/assets/imgs/ssh-light.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 40px 40px;
+      }
+
+      #content > p, #list {
+        margin: 2rem;
+      }
+
+      .buttons {
+        padding: 2rem 0;
+      }
 
     </style>
   </head>
   <body>
+
     <main>
+
+      <!-- FIXME: should be an include -->
+      <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
+
+      <header>
+      </header>
+
+      <amp-img
+        layout="responsive"
+        src='/assets/imgs/intro.png'
+        width='746'
+        height='1050'
+        sizes="(min-width: 800px) 240px, 100vw">
+      </amp-img>
+
       <div id="content">
+
+        <h1>The Bootleggers List</h1>
+
+        <p>
+          Discover The Bootleggers List, the Top 10 cocktail bars of Taipei.
+        </p>
+        <p>
+          We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei. We are proud to present you The Bootleggers List, the Top 10 Cocktail bar in the city. We care about the drinks quality, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bar and the most eccentric speakeasy Taipei has to offer.
+        </p>
+
+        <h2>The List</h2>
+
+        <div id="list">
         
-        <div>
-          <a href="taipei/citynorth.html">CityNorth 小城外</a>
-        </li>
-        
-        <div>
-          <a href="taipei/mud.html">Mud</a>
-        </li>
-        
-        <div>
-          <a href="taipei/longtail.html">Longtail</a>
-        </li>
-        
-        <div>
-          <a href="taipei/turningpoint.html">Turning Point</a>
-        </li>
-        
-        <div>
-          <a href="taipei/mimique.html">Mimique</a>
-        </li>
-        
-        <div>
-          <a href="taipei/tenderland.html">The Tender Land
-溫柔鄉</a>
-        </li>
-        
-        <div>
-          <a href="taipei/ginspiration.html">Ginspiration
+          <div>
+            <a href="taipei/ginspiration.html">Ginspiration
 發琴吧</a>
-        </li>
+          </div>
         
-        <div>
-          <a href="taipei/aha.html">AHA Saloon</a>
-        </li>
+          <div>
+            <a href="taipei/turningpoint.html">Turning Point</a>
+          </div>
         
-        <div>
-          <a href="taipei/mozi.html">Mozi</a>
-        </li>
-        
-        <div>
-          <a href="taipei/washu.html">WA-SHU
+          <div>
+            <a href="taipei/washu.html">WA-SHU
 和酒</a>
-        </li>
+          </div>
         
+          <div>
+            <a href="taipei/mozi.html">Mozi</a>
+          </div>
+        
+          <div>
+            <a href="taipei/mud.html">Mud</a>
+          </div>
+        
+          <div>
+            <a href="taipei/mimique.html">Mimique</a>
+          </div>
+        
+          <div>
+            <a href="taipei/aha.html">AHA Saloon</a>
+          </div>
+        
+          <div>
+            <a href="taipei/citynorth.html">CityNorth
+小城外</a>
+          </div>
+        
+          <div>
+            <a href="taipei/longtail.html">Longtail</a>
+          </div>
+        
+          <div>
+            <a href="taipei/tenderland.html">The Tender Land
+溫柔鄉</a>
+          </div>
+        
+        </div>
+
+        <h2>The Map</h2>
+
+        <amp-iframe width="800" height="800"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            layout="responsive"
+            frameborder="0"
+            src="https://www.google.com/maps/d/embed?mid=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q">
+            <div placeholder>Map loading</div>
+        </amp-iframe>
+
+        <div class="buttons">
+          <div role="button">
+            <a class="nounderline" href="https://drive.google.com/open?id=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q&usp=sharing" target="_blank">Open the map on Google Map</a>
+          </div>
+        </div>
+
       </div>
 
-
-      <p>
-        <a href="https://drive.google.com/open?id=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q&usp=sharing" target="_blank">See the 10 bars on Google map</a>
-      </p>
-      <amp-iframe width="800" height="800"
-          sandbox="allow-scripts allow-same-origin allow-popups"
-          layout="responsive"
-          frameborder="0"
-          src="https://www.google.com/maps/d/embed?mid=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q">
-          <div layout="responsive" placeholder>Map loading</div>
-      </amp-iframe>
-
       <footer>
-  <p>2018</p>
-  <p><a class="nounderline" href="/">The Bootleggers List</a></p>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
 </footer>
 
 

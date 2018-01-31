@@ -8,18 +8,19 @@
     <link rel="canonical" href="https://thebootleggerslist.com//.html">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 
-        <!-- Generated with https://realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icons/manifest.json">
-    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-    <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#151c22">
-
-
+    <!-- Generated with https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/manifest.json">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#151c22">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#151c22">
 
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -39,8 +40,8 @@ a, a:visited { color: inherit }
 blockquote { margin: 0; }
 
 html {
-  background-color: #11161C;
-  color: #BD975E;
+  background-color: white;
+  color: black;
 }
 
 th {
@@ -55,7 +56,7 @@ main {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  background-color: #11161C;
+  background-color: white;
 }
 
 footer {
@@ -66,10 +67,10 @@ footer {
 }
 
 h1 {
+  text-align: center;
   font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: pre;
 }
 
 h2 {
@@ -88,7 +89,7 @@ h2 {
   text-decoration: none;
 }
 
-header {
+#backheader {
   position: fixed;
   left: 0;
   top: 0;
@@ -96,13 +97,13 @@ header {
   z-index: 999;
 }
 
-header > .backtext {
+#backheader > .backtext {
   display: block;
   width: 100%;
   letter-spacing: 2px;
-  background: #11161C;
+  background: white;
   text-align: center;
-  border-bottom: 1px solid #BD975E;
+  border-bottom: 1px solid black;
   text-transform: uppercase;
   line-height: 4rem;
   padding: 0 3rem;
@@ -113,12 +114,12 @@ header > .backtext {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  header > .backtext {
-    border-bottom: 0.5px solid #BD975E;
+  #backheader > .backtext {
+    border-bottom: 0.5px solid black;
   }
 }
 
-header > .backicon {
+#backheader > .backicon {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -126,7 +127,7 @@ header > .backicon {
   height: 2rem;
 }
 
-header > .backicon:after {
+#backheader > .backicon:after {
   content: "";
   position: absolute;
   left: 0.5rem;
@@ -135,10 +136,10 @@ header > .backicon:after {
   height: 1rem;
   display: block;
   transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
+  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
 }
 
-.headerscrollouttrigger {
+#headerscrollouttrigger {
   width: 20vw;
   pointer-events: none;
 }
@@ -154,7 +155,7 @@ header > .backicon:after {
   .name {
     font-size: 2rem;
   }
-  header {
+  #backheader {
     width: 800px;
     margin: auto;
     right: 50%;
@@ -166,18 +167,347 @@ header > .backicon:after {
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  width: 30%;
+  padding: 4px;
+  border-width: 1px;
+  border-color: ;
+  border-style: solid;
+  font-size: 12px;
+  border-radius: 3px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .buttons > div {
+    border-width: 0.5px;
+  }
+}
+
+
+
+      main {
+        padding: 3rem 1rem 0;
+      }
+
+      h1, h2 {
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
 
     </style>
   </head>
   <body>
+
+    <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
+
     <main>
 
-      <p>FIXME</p>
+      <amp-animation id="showheader" layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "500ms",
+        "fill": "both",
+        "animations": [{
+          "selector": ".backtext",
+          "keyframes": {"opacity": 1}
+        }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideheader" layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "0.1s",
+        "fill": "both",
+        "animations": [{
+          "selector": ".backtext",
+          "keyframes": {"opacity": 0}
+        }]
+    }
+  </script>
+</amp-animation>
+
+<div id="headerscrollouttrigger">
+  <amp-position-observer on="exit:showheader.start enter:hideheader.start" layout="nodisplay"></amp-position-observer>
+</div>
+
+<header id="backheader">
+  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
+  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to list"></a>
+</header>
+
+
+      <h1>About us</h1>
+      <p>
+        We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei. We are proud to present you The Bootleggers List, the Top 10 Cocktail bar in the city. We care about the drinks quality, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bar and the most eccentric speakeasy Taipei has to offer.
+      </p>
+      <h2>Contact</h2>
+      <p>
+        If you own a business and would like to be reviewed or if you have any business inquiry,
+        you can contact Almen via email: amunsellck@gmail.com or contact the team via
+        <a href="https://www.facebook.com/TheBootleggersList">Facebook</a>.
+      </p>
+
+      <h2>Did you get payed to promote these bars?</h2>
+      <p>
+        No. We wanted to recognize the amazing mixology scene of Taipei, the bars are being reviewed anonymously and we did not receive any special treatment.
+      </p>
+
+      <h2>Is this list sorted?</h2>
+      <p>
+        No. It is not. All these 10 bars are equally amazing. There is not Top 1 or Top 10.
+      </p>
+
+      <h2>Why only 10 bars?</h2>
+      <p>
+        Limiting the list to 10 bars is purely deliberate. We want to help you choose, and not overwhelm you with hundreds of options.
+      </p>
+
+      <h2>Why these bars? What were your criteria?</h2>
+      <p>
+        There are bars for any taste and mood. We agreed on focusing on 3 areas: the <strong>quality of the drinks</strong> (we need to be
+        able to recognize the base and feel complexity and layers. The cocktail needs to be creative or meet the customer
+        expectations), the friendliness of the staff (a bartender needs to be able to listen and recommend the customer, at least,
+        and be available for conversation), and finally the quality of the venue (not too crowded, cleanliness, noise level, other
+        customers behaviors, …).
+      </p>
+
+      <h2>Which bars did you visit?</h2>
+      <p>
+        More than one hundred. Here is the list: 
+        <ul>
+          
+          <li>Ginspiration
+發琴吧</li>
+          
+          <li>Turning Point</li>
+          
+          <li>WA-SHU
+和酒</li>
+          
+          <li>Mozi</li>
+          
+          <li>Mud</li>
+          
+          <li>Mimique</li>
+          
+          <li>AHA Saloon</li>
+          
+          <li>CityNorth
+小城外</li>
+          
+          <li>Longtail</li>
+          
+          <li>The Tender Land
+溫柔鄉</li>
+          
+          <li>私人酒櫥
+Indulge Private</li>
+          
+          <li>Digout</li>
+          
+          <li>Le Kief</li>
+          
+          <li>Bar Pun</li>
+          
+          <li>洒家小酒館 SaJia Bistro</li>
+          
+          <li>Bar Chu </li>
+          
+          <li>Placebo 安慰劑小酒館</li>
+          
+          <li>B line by A train</li>
+          
+          <li>貓下去計劃</li>
+          
+          <li>Tairroir</li>
+          
+          <li>Torarakuya 寅樂屋</li>
+          
+          <li>Kashoku</li>
+          
+          <li>MOD</li>
+          
+          <li>Shotia</li>
+          
+          <li>hideout</li>
+          
+          <li>Motown Taipei</li>
+          
+          <li>MILLS CAFÉ BISTRO</li>
+          
+          <li>孔雀歐亞料理餐酒館Peacock Bistro</li>
+          
+          <li>PUROS</li>
+          
+          <li>ansleep cafe+bar</li>
+          
+          <li>Nox Taipei</li>
+          
+          <li>Circle Bar</li>
+          
+          <li>Fucking Place</li>
+          
+          <li>4plus</li>
+          
+          <li>La Petite Chambre 小房間餐酒館</li>
+          
+          <li>James Joyce Irish Bar</li>
+          
+          <li>HangOut Cocktail Bar</li>
+          
+          <li>A Train Leads The Way To Jazz</li>
+          
+          <li>MONO MONO</li>
+          
+          <li>DA Bar - Relax/Social/Mingle</li>
+          
+          <li>Fourplay 2.0</li>
+          
+          <li>Tickle my fantasy</li>
+          
+          <li>笨嗽音吶 BSIN Darts &amp; Bar</li>
+          
+          <li>The 58 Bar - 台灣自釀啤酒專賣</li>
+          
+          <li>Way Home 家途中啤酒屋</li>
+          
+          <li>HANKO 60</li>
+          
+          <li>Kushi Bar</li>
+          
+          <li>Iwine Live 愛玩樂</li>
+          
+          <li>MayBE Music Bar</li>
+          
+          <li>The Malt</li>
+          
+          <li>Hero Bar</li>
+          
+          <li>ABRAZO BISTRO 擁抱</li>
+          
+          <li>Boogie Bistro</li>
+          
+          <li>初門 Rawdoor</li>
+          
+          <li>樂花園 Lok Hue Hng Bar &amp; Cafe</li>
+          
+          <li>TigerLily Taipei</li>
+          
+          <li>Driftwood 西門町</li>
+          
+          <li>小酒Shochu yakitori</li>
+          
+          <li>寓 SALON &amp; BAR</li>
+          
+          <li>鈞太酒藏 DOMAINE WINE CELLARS</li>
+          
+          <li>Relax Jazz Pub</li>
+          
+          <li>Brewstill Tea Tavern</li>
+          
+          <li>X Reviver </li>
+          
+          <li>Ex Libris </li>
+          
+          <li>Something Beautiful</li>
+          
+          <li>Bochibochi Bar</li>
+          
+          <li>DUO Taipei Bar &amp; Bistro</li>
+          
+          <li>Beau</li>
+          
+          <li>Fairy Taipei</li>
+          
+          <li>Le Zinc 洛 Café &amp; Bar</li>
+          
+          <li>Commons</li>
+          
+          <li>Vine Bar 藤蔓老屋</li>
+          
+          <li>Matt Bar</li>
+          
+          <li>Backyard Jr.</li>
+          
+          <li>Bar Mood Taipei - 吧沐</li>
+          
+          <li>C'est si bon Lounge Bar</li>
+          
+          <li>備長炭Carbon Bar&amp;Bistro</li>
+          
+          <li>Unknown Lounge</li>
+          
+          <li>Vicious Circle Music House</li>
+          
+          <li>家傢酒play house</li>
+          
+          <li>MQ [ Marquee Taipei ]</li>
+          
+          <li>Mod二店</li>
+          
+          <li>FiFi茶酒沙龍W Bar</li>
+          
+          <li>45酒吧</li>
+          
+          <li>BOBWUNDAYE</li>
+          
+          <li>後院 Arrierecours / Backyard </li>
+          
+          <li>The Local</li>
+          
+          <li>Sappho Live Jazz</li>
+          
+          <li>VG Cafe' Taipei</li>
+          
+          <li>East End Bar</li>
+          
+          <li>Indulge Bistro</li>
+          
+          <li>Kor</li>
+          
+          <li>Le Fumoir</li>
+          
+          <li>The Bottle Shop</li>
+          
+          <li>BAR小谷</li>
+          
+          <li>Ounce (new one)</li>
+          
+          <li>Bar Between</li>
+          
+          <li>R&amp;D Cocktail Lab</li>
+          
+          <li>Tropical Itch</li>
+          
+          <li>Red Circle HAIR SALON &amp; BAR</li>
+          
+        </ul>
+      </p>
 
       <footer>
-  <p>2018</p>
-  <p><a class="nounderline" href="/">The Bootleggers List</a></p>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
 </footer>
 
 
