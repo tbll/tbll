@@ -146,7 +146,7 @@ html {
 }
 
 main {
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 th {
@@ -166,11 +166,20 @@ footer > p {
   line-height: 2.5rem;
 }
 
+footer > p > a {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+#copyright {
+  margin-top: 5rem;
+}
+
 #award {
   display: block;
   clear: both;
-  width: 250px;
-  height: 183.585px;
+  width: 200px;
+  height: 147px;
   background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -210,7 +219,7 @@ footer > p {
   border-width: 1px;
   border-style: solid;
   border-color: #BD975E;
-  background-color: #11161C;
+  background-color: ;
 }
 .buttons > div:first-of-type {
   margin-left: 0;
@@ -225,7 +234,7 @@ footer > p {
 }
 
 .font_title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -255,13 +264,18 @@ footer > p {
 }
 
 
-      h1, h2 {
+      h1 {
+        margin-bottom: 0.8rem;
+        text-align: center;
+      }
+
+      h2 {
         margin: 0;
         text-align: center;
       }
 
       #award {
-        margin: 6rem auto;
+        margin: 3rem auto;
       }
 
       @media (max-width: 620px) {
@@ -274,10 +288,9 @@ footer > p {
         flex-wrap: wrap;
         display: flex;
         justify-content: space-between;
-        margin: 6rem 0;
         border-width: 1px 0;
         border-style: solid;
-        border-color: #BD975E;
+        border-color: #523c1b;
       }
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
@@ -285,7 +298,6 @@ footer > p {
           border-width: 0.5px 0;
         }
       }
-
 
       #list > a {
         display: block;
@@ -309,15 +321,16 @@ footer > p {
           padding: 0 2vw;
         }
         #list {
-          padding: 3rem 2vw;
+          padding: 4rem 0;
+          width: 90vw;
+          margin: 6rem auto;
         }
         #list > a {
-          width: 48vw;
-          padding: 0 1vw;
+          width: calc(90vw / 2);
         }
         #list > a > amp-img {
-          max-width: 44vw;
-          max-height: 24.64vw;
+          max-width: calc(90vw / 2 - 2 * 10px);
+          max-height: calc((90vw / 2 - 2 * 10px) / 1.7857);
         }
       }
 
@@ -327,14 +340,17 @@ footer > p {
           padding: 0 2vw;
         }
         #list {
-          padding: 3rem 2vw;
+          padding: 4rem 0;
+          width: 90vw;
+          margin: 6rem auto;
         }
         #list > a {
-          width: 18vw;
+          display: block;
+          width: calc(90vw / 5);
         }
         #list > a > amp-img {
-          max-width: 18vw;
-          max-height: 10vw;
+          max-width: calc(90vw / 5 - 20px);
+          max-height: calc((90vw / 5 - 20px) / 1.7857);
         }
       }
 
@@ -344,14 +360,16 @@ footer > p {
           padding: 0 10px;
         }
         #list {
-          padding: 6rem 10px;
+          padding: 4rem 0;
+          width: 1400px;
+          margin: 6rem auto;
         }
         #list > a {
-          width: 260px;
+          width: calc(1400px / 5);
         }
         #list > a > amp-img {
-          max-width: 260px;
-          max-height: 145.6px;
+          max-width: calc(1400px / 5 - 20px);
+          max-height: calc((1400px / 5 - 20px) / 1.7857);
         }
       }
 
@@ -360,6 +378,7 @@ footer > p {
       }
 
       #map {
+        margin: 5rem 0;
         width: 100%;
         height: 400px;
       }
@@ -370,13 +389,11 @@ footer > p {
         max-height: 400px;
       }
 
-      main {
-        max-width: 1420px;
-        margin: auto;
-      }
-
       #whoarewe {
-        margin: 6rem 0;
+        max-width: 600px;
+        line-height: 1.5rem;
+        margin: 5rem auto;
+        text-align: center;
       }
 
     </style>
@@ -496,6 +513,10 @@ footer > p {
         <p><a href="/about.html">Learn more</a>.</p>
       </div>
 
+      <div class="buttons font_small">
+        <a role="button" class="nounderline" href="/about.html">Learn more</a>
+      </div>
+
       <div id="map" layout="container">
         <amp-iframe height="400"
             sandbox="allow-scripts allow-same-origin allow-popups"
@@ -510,10 +531,11 @@ footer > p {
       </div>
 
       <footer class="font_title">
+  <a href="/"><div id="award"></div></a>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
   <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
   <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
-  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
+  <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 
 

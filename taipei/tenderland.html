@@ -73,8 +73,8 @@
     <meta property="og:description" content="The Tender Land
 溫柔鄉, Late-night comfort food and top-quality whisky.">
     <meta property="og:image" content="https://thebootleggerslist.com/imgs/tenderland-0-720.jpg">
-    <meta property="og:image:width" content="720">
-    <meta property="og:image:height" content="540">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="480">
     <meta property="og:url" content="https://thebootleggerslist.com/taipei/tenderland">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="143531433112591">
@@ -105,7 +105,7 @@ html {
 }
 
 main {
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 th {
@@ -125,11 +125,20 @@ footer > p {
   line-height: 2.5rem;
 }
 
+footer > p > a {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+#copyright {
+  margin-top: 5rem;
+}
+
 #award {
   display: block;
   clear: both;
-  width: 250px;
-  height: 183.585px;
+  width: 200px;
+  height: 147px;
   background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -169,7 +178,7 @@ footer > p {
   border-width: 1px;
   border-style: solid;
   border-color: #BD975E;
-  background-color: #11161C;
+  background-color: ;
 }
 .buttons > div:first-of-type {
   margin-left: 0;
@@ -184,7 +193,7 @@ footer > p {
 }
 
 .font_title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -314,7 +323,7 @@ footer > p {
       #meta {
         margin: 0 auto;
         width: 300px;
-        float: right;
+        float: left;
       }
 
       @media (max-width: 850px) {
@@ -327,6 +336,23 @@ footer > p {
         #carousel {
           margin-top: 0;
         }
+      }
+      @media (min-width: 850px) {
+        #content {
+          padding: 0 0 0 2rem;
+        }
+      }
+
+      #split {
+        padding: 4rem 0;
+      }
+
+      #split > p > a {
+        line-height: 2rem;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: #523c1b;
+        padding-top: 4px;
       }
 
     </style>
@@ -355,7 +381,7 @@ footer > p {
 
       <amp-carousel
         id="carousel"
-        width='720' height='540'
+        width='800' height='480'
         layout="responsive"
         loop
         controls
@@ -364,8 +390,8 @@ footer > p {
         
           <amp-img
             src='/imgs/tenderland-0-720.jpg'
-            width='720'
-            height='540'
+            width='800'
+            height='480'
             sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": Kitchen surrounded by the bar"
@@ -374,8 +400,8 @@ footer > p {
         
           <amp-img
             src='/imgs/tenderland-1-720.jpg'
-            width='720'
-            height='959'
+            width='800'
+            height='480'
             sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": Loop up to find the bottles"
@@ -384,8 +410,8 @@ footer > p {
         
           <amp-img
             src='/imgs/tenderland-2-720.jpg'
-            width='720'
-            height='959'
+            width='800'
+            height='480'
             sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": Try their finest whisky"
@@ -394,8 +420,8 @@ footer > p {
         
           <amp-img
             src='/imgs/tenderland-3-720.jpg'
-            width='720'
-            height='540'
+            width='800'
+            height='480'
             sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": "
@@ -404,8 +430,8 @@ footer > p {
         
           <amp-img
             src='/imgs/tenderland-4-720.jpg'
-            width='720'
-            height='959'
+            width='800'
+            height='480'
             sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": "
@@ -462,9 +488,11 @@ footer > p {
           <p>Eat at the bar. Get ramen or beef noodles.</p>
 
         </div>
-      </div>
+        <div id="split">
+          <p class="font_title"><a class="nounderline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei</a></p>
+        </div>
 
-      <div id="award"></div>
+      </div>
 
       
       
@@ -473,14 +501,14 @@ footer > p {
       <figure>
         <amp-img
           src='/imgs/tenderland-1-720.jpg'
-          width='720'
-          height='959'
+          width='800'
+          height='480'
           sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": Loop up to find the bottles"
           srcset="/imgs/tenderland-1-360.jpg 360w, /imgs/tenderland-1-720.jpg 720w, /imgs/tenderland-1-1080.jpg 1080w, /imgs/tenderland-1-1440.jpg 1440w, /imgs/tenderland-1-1800.jpg 1800w">
         </amp-img>
-        <figcaption class="font_title">Loop up to find the bottles</figcaption>
+        <figcaption class="font_content">Loop up to find the bottles</figcaption>
       </figure>
       
       
@@ -488,14 +516,14 @@ footer > p {
       <figure>
         <amp-img
           src='/imgs/tenderland-2-720.jpg'
-          width='720'
-          height='959'
+          width='800'
+          height='480'
           sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": Try their finest whisky"
           srcset="/imgs/tenderland-2-360.jpg 360w, /imgs/tenderland-2-720.jpg 720w, /imgs/tenderland-2-1080.jpg 1080w, /imgs/tenderland-2-1440.jpg 1440w, /imgs/tenderland-2-1800.jpg 1800w">
         </amp-img>
-        <figcaption class="font_title">Try their finest whisky</figcaption>
+        <figcaption class="font_content">Try their finest whisky</figcaption>
       </figure>
       
       
@@ -503,14 +531,14 @@ footer > p {
       <figure>
         <amp-img
           src='/imgs/tenderland-3-720.jpg'
-          width='720'
-          height='540'
+          width='800'
+          height='480'
           sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": "
           srcset="/imgs/tenderland-3-360.jpg 360w, /imgs/tenderland-3-720.jpg 720w, /imgs/tenderland-3-1080.jpg 1080w, /imgs/tenderland-3-1440.jpg 1440w, /imgs/tenderland-3-1800.jpg 1800w">
         </amp-img>
-        <figcaption class="font_title"></figcaption>
+        <figcaption class="font_content"></figcaption>
       </figure>
       
       
@@ -518,14 +546,14 @@ footer > p {
       <figure>
         <amp-img
           src='/imgs/tenderland-4-720.jpg'
-          width='720'
-          height='959'
+          width='800'
+          height='480'
           sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": "
           srcset="/imgs/tenderland-4-360.jpg 360w, /imgs/tenderland-4-720.jpg 720w, /imgs/tenderland-4-1080.jpg 1080w, /imgs/tenderland-4-1440.jpg 1440w, /imgs/tenderland-4-1800.jpg 1800w">
         </amp-img>
-        <figcaption class="font_title"></figcaption>
+        <figcaption class="font_content"></figcaption>
       </figure>
       
       
@@ -533,22 +561,23 @@ footer > p {
       <figure>
         <amp-img
           src='/imgs/tenderland-0-720.jpg'
-          width='720'
-          height='540'
+          width='800'
+          height='480'
           sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt="The Tender Land
 溫柔鄉: Kitchen surrounded by the bar"
           srcset="/imgs/tenderland-0-360.jpg 360w, /imgs/tenderland-0-720.jpg 720w, /imgs/tenderland-0-1080.jpg 1080w, /imgs/tenderland-0-1440.jpg 1440w, /imgs/tenderland-0-1800.jpg 1800w">
         </amp-img>
-        <figcaption></figcaption>
+        <figcaption class="font_content"></figcaption>
       </figure>
 
       <footer class="font_title">
+  <a href="/"><div id="award"></div></a>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
   <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
   <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
-  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
+  <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 
 

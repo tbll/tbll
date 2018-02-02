@@ -46,7 +46,7 @@ html {
 }
 
 main {
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 th {
@@ -66,11 +66,20 @@ footer > p {
   line-height: 2.5rem;
 }
 
+footer > p > a {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+#copyright {
+  margin-top: 5rem;
+}
+
 #award {
   display: block;
   clear: both;
-  width: 250px;
-  height: 183.585px;
+  width: 200px;
+  height: 147px;
   background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -110,7 +119,7 @@ footer > p {
   border-width: 1px;
   border-style: solid;
   border-color: #BD975E;
-  background-color: #11161C;
+  background-color: ;
 }
 .buttons > div:first-of-type {
   margin-left: 0;
@@ -125,7 +134,7 @@ footer > p {
 }
 
 .font_title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -422,10 +431,11 @@ Indulge Private</li>
       </p>
 
       <footer class="font_title">
+  <a href="/"><div id="award"></div></a>
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
   <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
   <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
-  <p><a class="nounderline" href="/">2018 | The Bootleggers List</a></p>
+  <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 
 
