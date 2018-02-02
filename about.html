@@ -26,9 +26,6 @@
 <link rel="alternate" href="https://thebootleggerslist.com" hreflang="en-tw" />
 
 
-    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
-    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-
     <style amp-custom>
 
       @font-face {
@@ -44,8 +41,12 @@ a, a:visited { color: inherit }
 p, blockquote { margin: 0; }
 
 html {
-  background-color: white;
-  color: black;
+  background-color: #11161C;
+  color: #BD975E;
+}
+
+main {
+  padding-bottom: 8rem;
 }
 
 th {
@@ -56,116 +57,28 @@ th {
   font-family: "cambria", Georgia, Helvetica, Arial;
 }
 
-main {
-  margin: 60px auto;
-  background-color: white;
-}
-
 footer {
   padding: 4rem 0;
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 footer > p {
-  margin: 1rem;
-}
-
-h1 {
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-h2 {
-  margin-top: 2rem;
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: 1rem;
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  line-height: 2.5rem;
 }
 
 #award {
   display: block;
+  clear: both;
   width: 250px;
   height: 183.585px;
-  background-image: url(/assets/imgs/award_light.png);
+  background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
   margin: 1rem auto;
 }
 
-.capitalize {
-  text-transform: capitalize;
-}
-
 .nounderline {
   text-decoration: none;
-}
-
-header {
-  height: 60px;
-  background-color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  border-bottom: 1px solid black;
-  text-align: center;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 60px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#backheader > .backicon {
-  width: 15px;
-  height: 15px;
-  transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  header {
-    border-bottom: 0.5px solid black;
-  }
-}
-
-/* Mobile */
-@media (max-width: 850px) {
-  #backheader > .backtext {
-    display: block;
-    width: 100%;
-    padding: 0 60px;
-    overflow: hidden;
-  }
-
-  #backheader > .backicon {
-    display: block;
-    position: absolute;
-    top: 22.5px;
-    left: 22.5px;
-  }
-}
-
-/* Desktop  */
-@media (min-width: 850px) {
-  #backheader > .backicon {
-    display: inline-block;
-  }
 }
 
 [role=button] {
@@ -175,79 +88,72 @@ header {
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 300px;
+  margin: 1rem auto;
 }
 
 .buttons a {
   text-decoration: none;
 }
 
-.buttons > div {
+.buttons > [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: 3rem;
-  width: 30%;
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0 3px;
   padding: 4px;
   border-width: 1px;
-  border-color: black;
   border-style: solid;
-  font-size: 12px;
-  border-radius: 3px;
+  border-color: #BD975E;
+  background-color: #11161C;
+}
+.buttons > div:first-of-type {
+  margin-left: 0;
+}
+.buttons > div:last-of-type {
+  margin-right: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  .buttons > div {
+  .buttons > [role-button] {
     border-width: 0.5px;
   }
 }
 
-
-.hidecontent:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), white);
+.font_title {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.hidecontent {
-  height: 20vh;
+.font_small {
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
-@media (min-height: 600px) {
-  .hidecontent {
-    height: auto;
-  }
-  .hidecontent:before {
-    display: none;
-  }
-  #collapsebutton {
-    display: none;
-  }
+.font_italic {
+  font-style: italic;
 }
 
-.hideable {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+.font_pre {
+  white-space: pre;
 }
 
+.font_uppercase {
+  text-transform: uppercase;
+}
 
-      main {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
+.font_content {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
-      h1, h2 {
-        text-align: left;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
 
     </style>
   </head>
@@ -255,11 +161,6 @@ header {
 
     <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
 
-
-    <header id="backheader">
-  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
-</header>
 
 
     <main>
@@ -278,13 +179,14 @@ header {
       <h2>Contact</h2>
       <p>
         If you own a business and would like to be reviewed or if you have any business inquiry,
-        you can contact Almen via email: amunsellck@gmail.com or contact the team via
-        <a href="https://www.facebook.com/TheBootleggersList">Facebook</a>.
+        you can contact Almen via email: <a href="mailto:amunsellck@gmail.com">amunsellck@gmail.com</a>
+        or contact the team via <a href="https://www.facebook.com/TheBootleggersList">Facebook</a>.
       </p>
 
       <h2>Did you get payed to promote these bars?</h2>
       <p>
-        No. We wanted to recognize the amazing mixology scene of Taipei, the bars are being reviewed anonymously and we did not receive any special treatment.
+        No. We wanted to recognize the amazing mixology scene of Taipei, the bars are being reviewed
+        anonymously and we did not receive any special treatment.
       </p>
 
       <h2>Is this list sorted?</h2>
@@ -519,7 +421,7 @@ Indulge Private</li>
         </ul>
       </p>
 
-      <footer>
+      <footer class="font_title">
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
   <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
   <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>

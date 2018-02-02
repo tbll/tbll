@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <title>WA-SHU
-和酒 - The Top 10 Best Bars in taipei</title>
+和酒 - The Top 10 Cocktail Bars in taipei</title>
     <link rel="canonical" href="https://thebootleggerslist.com/taipei/washu.html">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover">
@@ -39,7 +39,7 @@
 和酒",
         "url": "https://thebootleggerslist.com/taipei/washu",
         "description": "WA-SHU
-和酒, A fun, exciting journey for true adventurers. One of the top 10 cocktails bar in Taipei.",
+和酒, A fun, exciting journey for true adventurers. One of the top 10 cocktails bars in Taipei.",
         "award": "The Bootleggers List - Taipei 2018",
         "logo": "https://thebootleggerslist.com/imgs/washu-logo.jpg",
         "image": "https://thebootleggerslist.com/imgs/washu-0-720.jpg",
@@ -100,8 +100,12 @@ a, a:visited { color: inherit }
 p, blockquote { margin: 0; }
 
 html {
-  background-color: white;
-  color: black;
+  background-color: #11161C;
+  color: #BD975E;
+}
+
+main {
+  padding-bottom: 8rem;
 }
 
 th {
@@ -112,116 +116,28 @@ th {
   font-family: "cambria", Georgia, Helvetica, Arial;
 }
 
-main {
-  margin: 60px auto;
-  background-color: white;
-}
-
 footer {
   padding: 4rem 0;
   text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 footer > p {
-  margin: 1rem;
-}
-
-h1 {
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-h2 {
-  margin-top: 2rem;
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: 1rem;
-  text-align: center;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  line-height: 2.5rem;
 }
 
 #award {
   display: block;
+  clear: both;
   width: 250px;
   height: 183.585px;
-  background-image: url(/assets/imgs/award_light.png);
+  background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
   margin: 1rem auto;
 }
 
-.capitalize {
-  text-transform: capitalize;
-}
-
 .nounderline {
   text-decoration: none;
-}
-
-header {
-  height: 60px;
-  background-color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  border-bottom: 1px solid black;
-  text-align: center;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 60px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#backheader > .backicon {
-  width: 15px;
-  height: 15px;
-  transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  header {
-    border-bottom: 0.5px solid black;
-  }
-}
-
-/* Mobile */
-@media (max-width: 850px) {
-  #backheader > .backtext {
-    display: block;
-    width: 100%;
-    padding: 0 60px;
-    overflow: hidden;
-  }
-
-  #backheader > .backicon {
-    display: block;
-    position: absolute;
-    top: 22.5px;
-    left: 22.5px;
-  }
-}
-
-/* Desktop  */
-@media (min-width: 850px) {
-  #backheader > .backicon {
-    display: inline-block;
-  }
 }
 
 [role=button] {
@@ -231,92 +147,72 @@ header {
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 300px;
+  margin: 1rem auto;
 }
 
 .buttons a {
   text-decoration: none;
 }
 
-.buttons > div {
+.buttons > [role=button] {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: 3rem;
-  width: 30%;
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0 3px;
   padding: 4px;
   border-width: 1px;
-  border-color: black;
   border-style: solid;
-  font-size: 12px;
-  border-radius: 3px;
+  border-color: #BD975E;
+  background-color: #11161C;
+}
+.buttons > div:first-of-type {
+  margin-left: 0;
+}
+.buttons > div:last-of-type {
+  margin-right: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  .buttons > div {
+  .buttons > [role-button] {
     border-width: 0.5px;
   }
 }
 
-
-.hidecontent:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.001), white);
+.font_title {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.hidecontent {
-  height: 20vh;
+.font_small {
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
-@media (min-height: 600px) {
-  .hidecontent {
-    height: auto;
-  }
-  .hidecontent:before {
-    display: none;
-  }
-  #collapsebutton {
-    display: none;
-  }
+.font_italic {
+  font-style: italic;
 }
 
-.hideable {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+.font_pre {
+  white-space: pre;
 }
 
+.font_uppercase {
+  text-transform: uppercase;
+}
 
-      main {
-        max-width: 850px;
-      }
+.font_content {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
-      #attributions, .buttons, #restaurant, #hours, #content, #tblldesc {
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-
-      .buttons, #restaurant, #hours, #content {
-        margin-top: 2rem;
-        margin-bottom: 0;
-      }
-
-      #restaurant, #attributions, figcaption, #tblldesc, #quote {
-        text-align: center;
-      }
-
-      figure {
-        margin: 2rem 0 0 0;
-      }
-
-      .intro {
-        font-style: italic;
-      }
 
       .hours {
         text-align: left;
@@ -330,6 +226,10 @@ header {
         padding-right: 20px;
       }
 
+      #attributions {
+        text-align: center;
+      }
+
       #attributions > p {
         display: inline;
         white-space: nowrap;
@@ -338,12 +238,12 @@ header {
       #frame {
         width: 300px;
         height: 183px;
-        margin: 10px auto 0;
-        background-image: url(/assets/imgs/frame_light.png);
-        background-size: 100% 100%;
         display: flex;
         flex-flow: column;
         padding: 30px;
+        text-align: center;
+        background-image: url(/assets/imgs/frame_dark.png);
+        background-size: 100% 100%;
       }
 
       #frametop, #framebottom {
@@ -356,31 +256,77 @@ header {
         justify-content: flex-end;
       }
 
-      #name {
+      #content {
+        overflow: hidden;
+      }
+
+      #framename {
         white-space: pre;
-        font-size: 20px;
+        font-size: 16px;
         margin: 0;
         padding: 0;
-      }
-
-      #quote {
-        font-size: 12px;
-        padding: 12px 0 0 0;
-      }
-
-      #tblldesc {
-        margin: 1rem 0;
         letter-spacing: 4px;
         text-transform: uppercase;
       }
 
-      #tblldesc > p {
-        margin: 0 auto;
-        max-width: 70%;
+      #framequote {
+        font-size: 12px;
+        padding: 12px 0 0 0;
+        letter-spacing: 2px;
+      }
+
+      #tblldesc {
+        margin: 1rem 0;
+      }
+
+      .hours, #content {
+        line-height: 1.5rem;
       }
 
       #carousel {
+        max-width: 850px;
+        margin: 2rem auto;
+        background-color: black;
+      }
+
+      figure > amp-img {
         background-color: #11161C;
+      }
+
+      #carousel, figure > amp-img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+      }
+
+      figure {
+        margin: 2rem 0 0 0;
+        text-align: center;
+      }
+
+      figure > amp-img {
+        margin: 2rem 0;
+      }
+
+      main {
+        max-width: 850px;
+        margin: auto;
+      }
+
+      #meta {
+        margin: 0 auto;
+        width: 300px;
+        float: right;
+      }
+
+      @media (max-width: 850px) {
+        #meta {
+          float: none;
+        }
+        #content {
+          padding: 0 2rem;
+        }
+        #carousel {
+          margin-top: 0;
+        }
       }
 
     </style>
@@ -390,11 +336,11 @@ header {
     <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
 
 
-    <header id="backheader">
+    <!-- <header id="backheader">
   <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
   <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
 </header>
-
+ -->
 
     <amp-state id="pagestate">
       <script type="application/json">
@@ -412,7 +358,7 @@ header {
         width='720' height='479'
         layout="responsive"
         loop
-        autoplay
+        controls
         delay="5000"
         type="slides">
         
@@ -468,63 +414,57 @@ header {
         
       </amp-carousel>
 
-      <div id="tblldesc">
-        <p>The Top 10 Cocktail Bars in taipei:</p>
+      <div id="meta">
+        <div id="frame">
+          <div id="frametop">
+            <p id="framename">WA-SHU
+和酒</p>
+          </div>
+          <div id="framebottom">
+            <p id="framequote">"A fun, exciting journey for true adventurers."</p>
+          </div>
+        </div>
+        <div class="buttons font_small">
+          <a role="button" target="_blank" href="https://www.facebook.com/washutaipei/">WA-SHU on Facebook</a>
+          <a role="button" target="_blank" href="https://maps.google.com/?cid=7103839651062047976">Map</a>
+          <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</div>
+        </div>
+        <div class="buttons font_small">
+          <a role="button" href="/">Back to the list</a>
+        </div>
+        <div class="hours font_content" hidden [hidden]="pagestate.hidehours">
+          <table>
+            <tbody>
+              <tr><th>Monday</th><th>8:00 PM – 2:00 AM</th></tr>
+              <tr><th>Tuesday</th><th>8:00 PM – 2:00 AM</th></tr>
+              <tr><th>Wednesday</th><th>8:00 PM – 2:00 AM</th></tr>
+              <tr><th>Thursday</th><th>8:00 PM – 2:00 AM</th></tr>
+              <tr><th>Friday</th><th>8:00 PM – 3:00 AM</th></tr>
+              <tr><th>Saturday</th><th>8:00 PM – 3:00 AM</th></tr>
+              <tr><th>Sunday</th><th>8:00 PM – 2:00 AM</th></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div id="frame">
-        <div id="frametop">
-          <h1 id="name">WA-SHU
+      <div id="content">
+        <h1 id="name" class="font_title font_pre">WA-SHU
 和酒</h1>
+        <div id="tblldesc" class="font_content font_italic">
+          <a href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
         </div>
-        <div id="framebottom">
-          <blockquote id="quote">"A fun, exciting journey for true adventurers."</blockquote>
+        <div class="hidecontent font_content" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
+          <p>Japanese bars aren’t uncommon in Taipei, but WA-SHU is one of a kind. For owner Tomoaki Inaba, the small cocktail bar is more of a playground where some of his wildest and weirdest ideas have been experimented, served and adored. Ground peanuts-filtered whisky, distilled oolong tea and spirits infused with banana, chocolate, wasabi, yuzu, chilli pepper…it turns out that whatever you can eat can surely be drunk here, and the rich taste and aroma are unparalleled to mixed cocktails. The big distiller and the wall of mysterious bottles hold the ultimate secrets to Tomoaki’s genius masterpieces. But if you’re lucky, you might be able to see the master alchemise his creativity into new recipes in front of you, and maybe even get to be the first to try!</p>
+
+        </div>
+        <h2 id="restauranttitle" class="font_title">Where to eat</h2>
+        <div class="font_content">
+          <p><a href='https://www.facebook.com/herban.taipei/'>Herban Kitchen</a>, a vegetarian restaurant, or <a href='https://www.facebook.com/Closet-Restaurant-Bar-144736812566803/'>Closet</a>.</p>
+
         </div>
       </div>
 
       <div id="award"></div>
-
-      <div class="buttons">
-        <div role="button"><a target="_blank" href="https://www.facebook.com/washutaipei/">WA-SHU on facebook</a></div>
-        <div role="button"><a target="_blank" href="https://maps.google.com/?cid=7103839651062047976">map</a></div>
-        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">show opening hours</div>
-      </div>
-
-      <div class="hours" hidden [hidden]="pagestate.hidehours">
-        <table>
-          <tbody>
-            <tr><th>Monday</th><th>8:00 PM – 2:00 AM</th></tr>
-            <tr><th>Tuesday</th><th>8:00 PM – 2:00 AM</th></tr>
-            <tr><th>Wednesday</th><th>8:00 PM – 2:00 AM</th></tr>
-            <tr><th>Thursday</th><th>8:00 PM – 2:00 AM</th></tr>
-            <tr><th>Friday</th><th>8:00 PM – 3:00 AM</th></tr>
-            <tr><th>Saturday</th><th>8:00 PM – 3:00 AM</th></tr>
-            <tr><th>Sunday</th><th>8:00 PM – 2:00 AM</th></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Review</h2>
-      <div id="content" class="hideable">
-        <div class="hidecontent" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
-          <h3>WA-SHU
-和酒</h3>
-          <p>Japanese bars aren’t uncommon in Taipei, but WA-SHU is one of a kind. For owner Tomoaki Inaba, the small cocktail bar is more of a playground where some of his wildest and weirdest ideas have been experimented, served and adored. Ground peanuts-filtered whisky, distilled oolong tea and spirits infused with banana, chocolate, wasabi, yuzu, chilli pepper…it turns out that whatever you can eat can surely be drunk here, and the rich taste and aroma are unparalleled to mixed cocktails. The big distiller and the wall of mysterious bottles hold the ultimate secrets to Tomoaki’s genius masterpieces. But if you’re lucky, you might be able to see the master alchemise his creativity into new recipes in front of you, and maybe even get to be the first to try!</p>
-
-        </div>
-      </div>
-
-      <div class="buttons" id="collapsebutton">
-        <div role="button" aria-label="expand review" tabindex="0" on="tap:AMP.setState({pagestate: { hidecontent: !pagestate.hidecontent}})" [text]="pagestate.hidecontent ? 'Read more…' : 'Show less'">Read more…</div>
-      </div>
-
-      <h2>Where to eat</h2>
-      <div id="restaurant">
-        <p><a href='https://www.facebook.com/herban.taipei/'>Herban Kitchen</a>, a vegetarian restaurant, or <a href='https://www.facebook.com/Closet-Restaurant-Bar-144736812566803/'>Closet</a>.</p>
-
-      </div>
-
-      <h2>Photos</h2>
 
       
       
@@ -540,7 +480,7 @@ header {
           alt=": "
           srcset="/imgs/washu-1-360.jpg 360w, /imgs/washu-1-720.jpg 720w, /imgs/washu-1-1080.jpg 1080w, /imgs/washu-1-1440.jpg 1440w, /imgs/washu-1-1800.jpg 1800w">
         </amp-img>
-        <figcaption></figcaption>
+        <figcaption class="font_title"></figcaption>
       </figure>
       
       
@@ -555,7 +495,7 @@ header {
           alt=": The lab"
           srcset="/imgs/washu-2-360.jpg 360w, /imgs/washu-2-720.jpg 720w, /imgs/washu-2-1080.jpg 1080w, /imgs/washu-2-1440.jpg 1440w, /imgs/washu-2-1800.jpg 1800w">
         </amp-img>
-        <figcaption>The lab</figcaption>
+        <figcaption class="font_title">The lab</figcaption>
       </figure>
       
       
@@ -570,7 +510,7 @@ header {
           alt=": "
           srcset="/imgs/washu-3-360.jpg 360w, /imgs/washu-3-720.jpg 720w, /imgs/washu-3-1080.jpg 1080w, /imgs/washu-3-1440.jpg 1440w, /imgs/washu-3-1800.jpg 1800w">
         </amp-img>
-        <figcaption></figcaption>
+        <figcaption class="font_title"></figcaption>
       </figure>
       
       
@@ -585,7 +525,7 @@ header {
           alt=": "
           srcset="/imgs/washu-4-360.jpg 360w, /imgs/washu-4-720.jpg 720w, /imgs/washu-4-1080.jpg 1080w, /imgs/washu-4-1440.jpg 1440w, /imgs/washu-4-1800.jpg 1800w">
         </amp-img>
-        <figcaption></figcaption>
+        <figcaption class="font_title"></figcaption>
       </figure>
       
       
@@ -604,7 +544,7 @@ header {
         <figcaption></figcaption>
       </figure>
 
-      <footer>
+      <footer class="font_title">
   <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
   <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
   <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
@@ -612,7 +552,7 @@ header {
 </footer>
 
 
-      <div id="attributions">Photos: <p><a href='https://www.facebook.com/antoninlee'>Antonin Lee</a> and <a href='https://www.facebook.com/EricLJY'>Junyou Liu</a></p>
+      <div id="attributions" class="font_content">Photos: <p><a href='https://www.facebook.com/antoninlee'>Antonin Lee</a> and <a href='https://www.facebook.com/EricLJY'>Junyou Liu</a></p>
 . <p>Design: <a href="http://yihsuanli.com/">Yi-Hsuan Li</a></p>.</div>
 
     </main>
