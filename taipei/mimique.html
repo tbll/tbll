@@ -220,6 +220,14 @@ footer > p > a {
   letter-spacing: 1px;
 }
 
+.underline {
+  text-decoration: none;
+  line-height: 2rem;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #523c1b;
+}
+
 
       .hours {
         text-align: left;
@@ -345,14 +353,6 @@ footer > p > a {
         padding: 4rem 0;
       }
 
-      #split > p > a {
-        line-height: 2rem;
-        border-width: 0 0 1px 0;
-        border-style: solid;
-        border-color: #523c1b;
-        padding-top: 4px;
-      }
-
       #goback:before {
         content: "<";
         display: inline-block;
@@ -366,11 +366,7 @@ footer > p > a {
     <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
 
 
-    <!-- <header id="backheader">
-  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
-</header>
- -->
+    <!--  -->
 
     <amp-state id="pagestate">
       <script type="application/json">
@@ -389,7 +385,8 @@ footer > p > a {
         layout="responsive"
         loop
         controls
-        delay="5000"
+        autoplay
+        delay="3000"
         type="slides">
         
           <amp-img
@@ -479,7 +476,7 @@ footer > p > a {
       <div id="content">
         <h1 id="name" class="font_title font_pre">Mimique</h1>
         <div id="tblldesc" class="font_content font_italic">
-          <a href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
+          <a class="underline" href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
         </div>
         <div class="hidecontent font_content" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
           <p>Mimique is just full of awesomeness. From its luxurious interior, the view from the windows, to its killer cocktails and attentive staff, there is not a single thing that we don’t like about this place! Opposite to its glamorous look with that huge chandelier, Mimique is actually a very inviting bar where you can just relax and enjoy a cosy night whether you’re alone or with friends. While the cocktails, like the venue itself, make perfect Instagram photos, the unique flavour and aroma are what make them truly special. Signature cocktails such as Iron Goddess Tea and Caviar Tonic surprised us with their freshness and depth, simply impressive. The two-storey venue is divided into areas of various styles, including a beautifully furnished smoking area, giving you the chance to explore a different nook every time you return.</p>
@@ -491,7 +488,7 @@ footer > p > a {
 
         </div>
         <div id="split">
-          <p class="font_title"><a class="nounderline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
+          <p class="font_title"><a class="underline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
         </div>
 
       </div>
@@ -575,9 +572,9 @@ footer > p > a {
 
       <footer class="font_title">
   <a href="/"><div id="award"></div></a>
-  <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
-  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
-  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="underline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="underline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="underline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
   <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 

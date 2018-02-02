@@ -220,6 +220,14 @@ footer > p > a {
   letter-spacing: 1px;
 }
 
+.underline {
+  text-decoration: none;
+  line-height: 2rem;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #523c1b;
+}
+
 
       .hours {
         text-align: left;
@@ -345,14 +353,6 @@ footer > p > a {
         padding: 4rem 0;
       }
 
-      #split > p > a {
-        line-height: 2rem;
-        border-width: 0 0 1px 0;
-        border-style: solid;
-        border-color: #523c1b;
-        padding-top: 4px;
-      }
-
       #goback:before {
         content: "<";
         display: inline-block;
@@ -366,11 +366,7 @@ footer > p > a {
     <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
 
 
-    <!-- <header id="backheader">
-  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
-</header>
- -->
+    <!--  -->
 
     <amp-state id="pagestate">
       <script type="application/json">
@@ -389,7 +385,8 @@ footer > p > a {
         layout="responsive"
         loop
         controls
-        delay="5000"
+        autoplay
+        delay="3000"
         type="slides">
         
           <amp-img
@@ -479,7 +476,7 @@ footer > p > a {
       <div id="content">
         <h1 id="name" class="font_title font_pre">AHA Saloon</h1>
         <div id="tblldesc" class="font_content font_italic">
-          <a href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
+          <a class="underline" href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
         </div>
         <div class="hidecontent font_content" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
           <p>Imagine seeing your favourite rock stars performing together on the same stage. It is exactly what happens when you walk into AHA Saloon: three of the few “startenders” from Taiwan in one bar, all extremely knowledgeable and creative…you know a good show is guaranteed for the night! The all-star drinking den is always packed, but if you’re lucky enough to be welcomed in, waste no time and go straight to the bar to meet the award-winning trio. Despite the fame and popularity, they do take time chatting with you, and it’s just like taking a master class of cocktails with your young, friendly professors. The outstanding startenders, professional waiters, beautiful venue and punchy cocktails make AHA Saloon a perfect spot to get your ultimate cocktail experience in the city.</p>
@@ -491,7 +488,7 @@ footer > p > a {
 
         </div>
         <div id="split">
-          <p class="font_title"><a class="nounderline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
+          <p class="font_title"><a class="underline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
         </div>
 
       </div>
@@ -575,9 +572,9 @@ footer > p > a {
 
       <footer class="font_title">
   <a href="/"><div id="award"></div></a>
-  <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
-  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
-  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="underline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="underline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="underline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
   <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 

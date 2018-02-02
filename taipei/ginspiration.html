@@ -226,6 +226,14 @@ footer > p > a {
   letter-spacing: 1px;
 }
 
+.underline {
+  text-decoration: none;
+  line-height: 2rem;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #523c1b;
+}
+
 
       .hours {
         text-align: left;
@@ -351,14 +359,6 @@ footer > p > a {
         padding: 4rem 0;
       }
 
-      #split > p > a {
-        line-height: 2rem;
-        border-width: 0 0 1px 0;
-        border-style: solid;
-        border-color: #523c1b;
-        padding-top: 4px;
-      }
-
       #goback:before {
         content: "<";
         display: inline-block;
@@ -372,11 +372,7 @@ footer > p > a {
     <amp-font layout="nodisplay" font-family="cambria" timeout="3000" on-load-add-class="cambriaready"></amp-font>
 
 
-    <!-- <header id="backheader">
-  <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
-</header>
- -->
+    <!--  -->
 
     <amp-state id="pagestate">
       <script type="application/json">
@@ -395,7 +391,8 @@ footer > p > a {
         layout="responsive"
         loop
         controls
-        delay="5000"
+        autoplay
+        delay="3000"
         type="slides">
         
           <amp-img
@@ -487,7 +484,7 @@ footer > p > a {
         <h1 id="name" class="font_title font_pre">Ginspiration
 發琴吧</h1>
         <div id="tblldesc" class="font_content font_italic">
-          <a href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
+          <a class="underline" href="/">By The Bootleggers List</a> - Taipei 2018. The Top 10 cocktail bars in town.
         </div>
         <div class="hidecontent font_content" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
           <p>The name says it all. At Ginspiration, gin is the one and only inspiration behind all drinks. Tucked away on the third floor of an old building, the intimate “gin-only” bar may be too small to be noticed, but definitely not too small for you to explore the complexity and subtlety of gin. Former gin seller Perry, who&#8217;s also your bartender of the night, knows best how to give his favourite liquor a twist with a slice of roasted tomato or a big cacao shell; you’ll soon find out that a simple martini can’t make the best gin justice. Gin inspired Perry to open Ginspiration; Ginspiration inspired us to create this website. And now, it’s time for you to discover the great potential of gin.</p>
@@ -499,7 +496,7 @@ footer > p > a {
 
         </div>
         <div id="split">
-          <p class="font_title"><a class="nounderline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
+          <p class="font_title"><a class="underline" href="/">The Bootleggers list: Discover the 10 best cocktails bars in Taipei.</a></p>
         </div>
 
       </div>
@@ -584,9 +581,9 @@ footer > p > a {
 
       <footer class="font_title">
   <a href="/"><div id="award"></div></a>
-  <p><a class="nounderline" href="/about.html">About &amp; Contact</a></p>
-  <p><a class="nounderline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
-  <p><a class="nounderline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
+  <p><a class="underline" href="/about.html">About &amp; Contact</a></p>
+  <p><a class="underline" href="https://facebook.com/TheBootleggersList">Find us on Facebook</a></p>
+  <p><a class="underline" href="https://instagram.com/TheBootleggersList">Find us on Instagram</a></p>
   <p id="copyright">2018 | The Bootleggers List</p>
 </footer>
 
