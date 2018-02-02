@@ -7,7 +7,7 @@
     <title>The Bootleggers List, the top 10 cocktail bars in Taipei</title>
     <link rel="canonical" href="https://thebootleggerslist.com/">
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
@@ -70,9 +70,7 @@ th {
 }
 
 main {
-  position: relative;
-  margin: 8vh auto;
-  max-width: 800px;
+  margin: 60px auto;
   background-color: white;
 }
 
@@ -112,8 +110,8 @@ h3 {
 
 #award {
   display: block;
-  width: 50vw;
-  height: 36.717vw;
+  width: calc(50 * 5px);
+  height: calc(36.717 * 5px);
   background-image: url(/assets/imgs/award_light.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -129,7 +127,7 @@ h3 {
 }
 
 header {
-  height: 8vh;
+  height: 60px;
   background-color: white;
   position: fixed;
   left: 0;
@@ -137,6 +135,20 @@ header {
   width: 100%;
   z-index: 999;
   border-bottom: 1px solid black;
+  text-align: center;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 60px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#backheader > .backicon {
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
@@ -145,57 +157,27 @@ header {
   }
 }
 
-#backheader > .backtext {
-  display: block;
-  width: 100%;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 8vh;
-  padding: 0 8vh;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#backheader > .backicon {
-  position: absolute;
-  top: 3vh;
-  left: 3vh;
-  width: 4vh;
-  height: 4vh;
-}
-
-#backheader > .backicon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2vh;
-  height: 2vh;
-  display: block;
-  transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
-}
-
-#headerscrollouttrigger {
-  width: 20vw;
-  pointer-events: none;
-}
-
-@media (min-width: 800px) {
-  html {
-    background: #EEE;
+/* Mobile */
+@media (max-width: 850px) {
+  #backheader > .backtext {
+    display: block;
+    width: 100%;
+    padding: 0 60px;
+    overflow: hidden;
   }
-  main {
-    margin: 5px auto 50px;;
-    box-shadow: 0px 6px 12px 3px rgba(0,0,0,0.2);
+
+  #backheader > .backicon {
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 22.5px;
   }
-  #backheader {
-    width: 800px;
-    margin: auto;
-    right: 50%;
-    margin-right: -400px;
+}
+
+/* Desktop  */
+@media (min-width: 850px) {
+  #backheader > .backicon {
+    display: inline-block;
   }
 }
 
@@ -260,103 +242,125 @@ header {
   }
 }
 
-#content {
+.hideable {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
 
-      header {
-        background-image: url(/assets/imgs/award_light.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 50px 36px;
+      main {
+        margin-top: 0;
       }
 
       #intro {
-        width: 80vw;
-        height: 120vw;
-        margin: auto;
-        background-image: url(/assets/imgs/title-intro-light.png), url(/assets/imgs/frame-intro-light.png);
-        background-size: 80%, 100%;
-        background-position: center;
+        height: 60vh;
         background-repeat: no-repeat;
+        background-position: top center;
+        background-image: url(/assets/imgs/card_hor_light.png);
+        background-size: auto 100%;
       }
 
-      #intro > h1 {
-        visibility: hidden;
-      }
-
-      h2, h3 {
-        margin: 2rem;
-      }
-
-      .buttons {
-        margin-top: 2rem;
-      }
-
-      #content {
-        padding: 0 2rem 1rem;
-        text-align: center;
-      }
-
-      #list {
-        text-align: center;
-      }
-
-      #list > a {
-        display: inline-block;
-        vertical-align: top;
+      #nextintro {
+        display: block;
+        height: 40vh;
         text-decoration: none;
-        margin: 3vw;
-        text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: 2px;
-        width: 40vw;
-        overflow: hidden;
       }
 
-      body.dark #list > a {
-        border: 1px solid black;
-      }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-        body.dark #list > a {
-          border: 0.5px solid black;
+      @media (orientation: portrait) {
+        #intro {
+          background-image: url(/assets/imgs/card_vert_light.png);
         }
       }
 
-      body.light #list > a {
-        box-shadow: 0 0 2px rgba(0,0,0,0.2);
-        border: 5px solid white;
-        border-radius: 2px;
+      #nextintro:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        border-width: 0 0 2px 2px;
+        border-style: solid;
+        border-color: black;
+        transform: rotate(-45deg);
       }
 
-      body.light #list > a > amp-img {
-        max-width: 36vw;
-        max-height: 36vw;
+      .buttons, h2, h3 {
+        margin: 2rem;
       }
 
-      body.dark #list > a > amp-img {
-        max-width: 40vw;
-        max-height: 40vw;
-        border-bottom: 1px solid black;
+      #whoarewe {
+        padding: 0 2rem 1rem;
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
       }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-        body.dark #list > a > amp-img {
-          border-bottom: 0.5px solid black;
+
+      #list {
+        flex-wrap: wrap;
+        display: flex;
+      }
+
+      #list > a {
+        display: block;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 2rem auto;
+      }
+
+      #list > a > amp-img {
+        border-radius: 5px;
+      }
+
+      /* Mobile */
+      @media (max-width: 800px) {
+        #list {
+          padding: 0 2vw;
+        }
+        #list > a {
+          width: 48vw;
+          padding: 0 1vw;
+        }
+        #list > a > amp-img {
+          max-width: 44vw;
+          max-height: calc(44vw * (336 / 600));
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 800px) {
+        #list {
+          padding: 0 5vw;
+        }
+        #list > a {
+          width: 18vw;
+          padding: 0 1vw;
+        }
+        #list > a > amp-img {
+          max-width: 16vw;
+          max-height: calc(16vw * (336 / 600));
         }
       }
 
       #list > a > p {
-        margin: 0.5rem 0 0 0;
-        line-height: 1rem;
-        height: 2rem;
-        white-space: pre;
+        margin: 0 0 0 5px;
       }
 
-      body.dark #list > a > p {
-        margin: 0.5rem 0;
+      #list > a > p.name {
+        text-transform: uppercase;
+        line-height: 1.5rem;
+        white-space: pre;
+        letter-spacing: 2px;
+      }
+
+      #list > a > p.summary {
+        line-height: 1.2rem;
+        letter-spacing: 1px;
+      }
+
+      amp-iframe {
+        margin: auto;
+        box-shadow: 0 0 0 1px black;
       }
 
     </style>
@@ -378,91 +382,114 @@ header {
 
     <main>
 
-      <h1 id="intro" alt="The 10 Best Cocktail Bars In Taipei"></h1>
+      <h1 id="intro" title="The 10 Best Cocktail Bars In Taipei"></h1>
 
-      <h2>Discover The Bootleggers List</h2>
-
-      <h3>We are proud to present you the 10 best cocktail bars in Taipei:</h3>
+      <a id="nextintro" href="#list">
+        <h2>Discover The Bootleggers List - TAIPEI 2018</h2>
+        <h3>We are proud to present you the 10 best cocktail bars in Taipei</h3>
+      </a>
 
       <div id="list">
       
-        <a target="_blank" href="taipei/ginspiration.html">
-          <amp-img src="/imgs/ginspiration-square.jpg" width="400" height="400" alt="Ginspiration
+        <a target="_blank" href="taipei/ginspiration.html" title="Ginspiration
+發琴吧">
+          <amp-img src="/imgs/ginspiration-tb.jpg" width="600" height="336" alt="Ginspiration
 發琴吧">
           </amp-img>
-          <p>Ginspiration
+          <p class="name">Ginspiration
 發琴吧</p>
+          <p class="summary">Everything you need to know about gin.</p>
         </a>
       
-        <a target="_blank" href="taipei/turningpoint.html">
-          <amp-img src="/imgs/turningpoint-square.jpg" width="400" height="400" alt="Turning Point">
+        <a target="_blank" href="taipei/turningpoint.html" title="Turning Point">
+          <amp-img src="/imgs/turningpoint-tb.jpg" width="600" height="336" alt="Turning Point">
           </amp-img>
-          <p>Turning Point</p>
+          <p class="name">Turning Point</p>
+          <p class="summary">Japanese minimalism in the heart of Taipei.</p>
         </a>
       
-        <a target="_blank" href="taipei/washu.html">
-          <amp-img src="/imgs/washu-square.jpg" width="400" height="400" alt="WA-SHU
+        <a target="_blank" href="taipei/washu.html" title="WA-SHU
+和酒">
+          <amp-img src="/imgs/washu-tb.jpg" width="600" height="336" alt="WA-SHU
 和酒">
           </amp-img>
-          <p>WA-SHU
+          <p class="name">WA-SHU
 和酒</p>
+          <p class="summary">A fun, exciting journey for true adventurers.</p>
         </a>
       
-        <a target="_blank" href="taipei/mozi.html">
-          <amp-img src="/imgs/mozi-square.jpg" width="400" height="400" alt="Mozi">
+        <a target="_blank" href="taipei/mozi.html" title="Mozi">
+          <amp-img src="/imgs/mozi-tb.jpg" width="600" height="336" alt="Mozi">
           </amp-img>
-          <p>Mozi</p>
+          <p class="name">Mozi</p>
+          <p class="summary">A quirky collage of contrasts and surprises.</p>
         </a>
       
-        <a target="_blank" href="taipei/mud.html">
-          <amp-img src="/imgs/mud-square.jpg" width="400" height="400" alt="Mud">
+        <a target="_blank" href="taipei/mud.html" title="Mud">
+          <amp-img src="/imgs/mud-tb.jpg" width="600" height="336" alt="Mud">
           </amp-img>
-          <p>Mud</p>
+          <p class="name">Mud</p>
+          <p class="summary">A secret base to chill with a group of friends.</p>
         </a>
       
-        <a target="_blank" href="taipei/mimique.html">
-          <amp-img src="/imgs/mimique-square.jpg" width="400" height="400" alt="Mimique">
+        <a target="_blank" href="taipei/mimique.html" title="Mimique">
+          <amp-img src="/imgs/mimique-tb.jpg" width="600" height="336" alt="Mimique">
           </amp-img>
-          <p>Mimique</p>
+          <p class="name">Mimique</p>
+          <p class="summary">Impeccable space, services and cocktails in a fabulous establishment.</p>
         </a>
       
-        <a target="_blank" href="taipei/aha.html">
-          <amp-img src="/imgs/aha-square.jpg" width="400" height="400" alt="AHA Saloon">
+        <a target="_blank" href="taipei/aha.html" title="AHA Saloon">
+          <amp-img src="/imgs/aha-tb.jpg" width="600" height="336" alt="AHA Saloon">
           </amp-img>
-          <p>AHA Saloon</p>
+          <p class="name">AHA Saloon</p>
+          <p class="summary">Meet the dream team of *startenders* for a 5-star experience.</p>
         </a>
       
-        <a target="_blank" href="taipei/citynorth.html">
-          <amp-img src="/imgs/citynorth-square.jpg" width="400" height="400" alt="CityNorth
+        <a target="_blank" href="taipei/citynorth.html" title="CityNorth
+小城外">
+          <amp-img src="/imgs/citynorth-tb.jpg" width="600" height="336" alt="CityNorth
 小城外">
           </amp-img>
-          <p>CityNorth
+          <p class="name">CityNorth
 小城外</p>
+          <p class="summary">Divine cocktails in a historical building.</p>
         </a>
       
-        <a target="_blank" href="taipei/longtail.html">
-          <amp-img src="/imgs/longtail-square.jpg" width="400" height="400" alt="Longtail">
+        <a target="_blank" href="taipei/longtail.html" title="Longtail">
+          <amp-img src="/imgs/longtail-tb.jpg" width="600" height="336" alt="Longtail">
           </amp-img>
-          <p>Longtail</p>
+          <p class="name">Longtail</p>
+          <p class="summary">A perfect combination of funky cocktails and exquisite fusion cuisine.</p>
         </a>
       
-        <a target="_blank" href="taipei/tenderland.html">
-          <amp-img src="/imgs/tenderland-square.jpg" width="400" height="400" alt="The Tender Land
+        <a target="_blank" href="taipei/tenderland.html" title="The Tender Land
+溫柔鄉">
+          <amp-img src="/imgs/tenderland-tb.jpg" width="600" height="336" alt="The Tender Land
 溫柔鄉">
           </amp-img>
-          <p>The Tender Land
+          <p class="name">The Tender Land
 溫柔鄉</p>
+          <p class="summary">Late-night comfort food and top-quality whisky.</p>
         </a>
       
       </div>
 
       <div id="award"></div>
 
-      <div id="content">
+      <div id="whoarewe" class="hideable">
         <div class="hidecontent" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
-          <p>
-            We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei. We are proud to present you The Bootleggers List, the Top 10 Cocktail bar in the city. We care about the drinks quality, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bar and the most eccentric speakeasy Taipei has to offer.
-          </p>
+          <p>We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei.</p>
+
+<p>We want to recognize the amazing mixology scene of Taipei.</p>
+
+<p>Our mission is to promote and encourage the many professionals who make the Taipei nightlife such a pleasant experience.</p>
+
+<p>We care about the quality of the drinks, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bars and the most eccentric speakeasy Taipei has to offer.</p>
+
+<p>We are proud to present you The Bootleggers List, the Top 10 Cocktail bars in the city.</p>
+
+          <p><a href="/about.html">Learn more</a>.</p>
         </div>
       </div>
 
@@ -476,6 +503,7 @@ header {
       <amp-iframe width="800" height="800"
           sandbox="allow-scripts allow-same-origin allow-popups"
           layout="responsive"
+          sizes="(min-width: 800px) 800px, 100vw"
           frameborder="0"
           src="https://www.google.com/maps/d/embed?mid=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q">
           <div placeholder>Map loading</div>
@@ -483,7 +511,7 @@ header {
 
       <div class="buttons">
         <div role="button">
-          <a class="nounderline" href="https://drive.google.com/open?id=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q&usp=sharing" target="_blank">Open the map on Google Map</a>
+          <a class="nounderline" href="https://www.google.com/maps/d/viewer?mid=1O6jRwp-0kGHKiwgaSAUPdp7_yUTDfC5Q" target="_blank">Open the map on Google Map</a>
         </div>
       </div>
 

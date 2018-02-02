@@ -7,7 +7,7 @@
     <title>About The Bootleggers List</title>
     <link rel="canonical" href="https://thebootleggerslist.com/about.html">
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
@@ -55,9 +55,7 @@ th {
 }
 
 main {
-  position: relative;
-  margin: 8vh auto;
-  max-width: 800px;
+  margin: 60px auto;
   background-color: white;
 }
 
@@ -97,8 +95,8 @@ h3 {
 
 #award {
   display: block;
-  width: 50vw;
-  height: 36.717vw;
+  width: calc(50 * 5px);
+  height: calc(36.717 * 5px);
   background-image: url(/assets/imgs/award_light.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -114,7 +112,7 @@ h3 {
 }
 
 header {
-  height: 8vh;
+  height: 60px;
   background-color: white;
   position: fixed;
   left: 0;
@@ -122,6 +120,20 @@ header {
   width: 100%;
   z-index: 999;
   border-bottom: 1px solid black;
+  text-align: center;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 60px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#backheader > .backicon {
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
@@ -130,57 +142,27 @@ header {
   }
 }
 
-#backheader > .backtext {
-  display: block;
-  width: 100%;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 8vh;
-  padding: 0 8vh;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#backheader > .backicon {
-  position: absolute;
-  top: 3vh;
-  left: 3vh;
-  width: 4vh;
-  height: 4vh;
-}
-
-#backheader > .backicon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2vh;
-  height: 2vh;
-  display: block;
-  transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 black, inset 2px -2px 0 0 white;
-}
-
-#headerscrollouttrigger {
-  width: 20vw;
-  pointer-events: none;
-}
-
-@media (min-width: 800px) {
-  html {
-    background: #EEE;
+/* Mobile */
+@media (max-width: 850px) {
+  #backheader > .backtext {
+    display: block;
+    width: 100%;
+    padding: 0 60px;
+    overflow: hidden;
   }
-  main {
-    margin: 5px auto 50px;;
-    box-shadow: 0px 6px 12px 3px rgba(0,0,0,0.2);
+
+  #backheader > .backicon {
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 22.5px;
   }
-  #backheader {
-    width: 800px;
-    margin: auto;
-    right: 50%;
-    margin-right: -400px;
+}
+
+/* Desktop  */
+@media (min-width: 850px) {
+  #backheader > .backicon {
+    display: inline-block;
   }
 }
 
@@ -245,7 +227,7 @@ header {
   }
 }
 
-#content {
+.hideable {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -273,17 +255,24 @@ header {
 
 
     <header id="backheader">
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
   <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
+  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
 </header>
 
 
     <main>
 
       <h1>About us</h1>
-      <p>
-        We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei. We are proud to present you The Bootleggers List, the Top 10 Cocktail bar in the city. We care about the drinks quality, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bar and the most eccentric speakeasy Taipei has to offer.
-      </p>
+      <p>We are The Bootleggers, a group of anonymous night owls who have visited and reviewed more than 100 cocktail bars in Taipei.</p>
+
+<p>We want to recognize the amazing mixology scene of Taipei.</p>
+
+<p>Our mission is to promote and encourage the many professionals who make the Taipei nightlife such a pleasant experience.</p>
+
+<p>We care about the quality of the drinks, the friendliness of the staff and the comfort of the venue. Our selection includes the most exclusive bars and the most eccentric speakeasy Taipei has to offer.</p>
+
+<p>We are proud to present you The Bootleggers List, the Top 10 Cocktail bars in the city.</p>
+
       <h2>Contact</h2>
       <p>
         If you own a business and would like to be reviewed or if you have any business inquiry,
