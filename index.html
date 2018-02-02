@@ -275,8 +275,17 @@ footer > p {
         display: flex;
         justify-content: space-between;
         margin: 6rem 0;
-        border: 1px solid #BD975E;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #BD975E;
       }
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+        #list {
+          border-width: 0.5px 0;
+        }
+      }
+
 
       #list > a {
         display: block;
