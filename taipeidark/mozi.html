@@ -7,7 +7,7 @@
     <title>Mozi - The Top 10 Best Bars in taipei</title>
     <link rel="canonical" href="https://thebootleggerslist.com/taipei/mozi.html">
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
@@ -81,9 +81,7 @@ th {
 }
 
 main {
-  position: relative;
-  margin: 8vh auto;
-  max-width: 800px;
+  margin: 60px auto;
   background-color: #11161C;
 }
 
@@ -123,8 +121,8 @@ h3 {
 
 #award {
   display: block;
-  width: 50vw;
-  height: 36.717vw;
+  width: 250px;
+  height: 183.585px;
   background-image: url(/assets/imgs/award_dark.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -140,7 +138,7 @@ h3 {
 }
 
 header {
-  height: 8vh;
+  height: 60px;
   background-color: #11161C;
   position: fixed;
   left: 0;
@@ -148,6 +146,20 @@ header {
   width: 100%;
   z-index: 999;
   border-bottom: 1px solid #BD975E;
+  text-align: center;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 60px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#backheader > .backicon {
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
@@ -156,57 +168,27 @@ header {
   }
 }
 
-#backheader > .backtext {
-  display: block;
-  width: 100%;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 8vh;
-  padding: 0 8vh;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#backheader > .backicon {
-  position: absolute;
-  top: 3vh;
-  left: 3vh;
-  width: 4vh;
-  height: 4vh;
-}
-
-#backheader > .backicon:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2vh;
-  height: 2vh;
-  display: block;
-  transform: rotate(45deg);
-  box-shadow: inset 1px -1px 0 0 #BD975E, inset 2px -2px 0 0 #11161C;
-}
-
-#headerscrollouttrigger {
-  width: 20vw;
-  pointer-events: none;
-}
-
-@media (min-width: 800px) {
-  html {
-    background: #EEE;
+/* Mobile */
+@media (max-width: 850px) {
+  #backheader > .backtext {
+    display: block;
+    width: 100%;
+    padding: 0 60px;
+    overflow: hidden;
   }
-  main {
-    margin: 5px auto 50px;;
-    box-shadow: 0px 6px 12px 3px rgba(0,0,0,0.2);
+
+  #backheader > .backicon {
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 22.5px;
   }
-  #backheader {
-    width: 800px;
-    margin: auto;
-    right: 50%;
-    margin-right: -400px;
+}
+
+/* Desktop  */
+@media (min-width: 850px) {
+  #backheader > .backicon {
+    display: inline-block;
   }
 }
 
@@ -271,12 +253,16 @@ header {
   }
 }
 
-#content {
+.hideable {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
+
+      main {
+        max-width: 850px;
+      }
 
       #attributions, .buttons, #restaurant, #hours, #content, #tblldesc {
         padding-left: 2rem;
@@ -300,12 +286,15 @@ header {
         font-style: italic;
       }
 
-      #hours {
-        clear: both;
+      .hours {
         text-align: left;
       }
 
-      #hours > table > tbody > tr > th:first-of-type {
+      .hours > table {
+        margin: 2rem auto;
+      }
+
+      .hours > table > tbody > tr > th:first-of-type {
         padding-right: 20px;
       }
 
@@ -315,15 +304,14 @@ header {
       }
 
       #frame {
-        width: 90vw;
-        height: 54.9vw;
+        width: 300px;
+        height: 183px;
         margin: 10px auto 0;
         background-image: url(/assets/imgs/frame_dark.png);
         background-size: 100% 100%;
-        padding: 0 15vw;
-        transform: scale(0.9);
         display: flex;
         flex-flow: column;
+        padding: 30px;
       }
 
       #frametop, #framebottom {
@@ -338,14 +326,14 @@ header {
 
       #name {
         white-space: pre;
-        font-size: 5vw;
+        font-size: 20px;
         margin: 0;
         padding: 0;
       }
 
       #quote {
-        font-size: 4vw;
-        padding: 4vw 0 0 0;
+        font-size: 12px;
+        padding: 12px 0 0 0;
       }
 
       #tblldesc {
@@ -371,8 +359,8 @@ header {
 
 
     <header id="backheader">
-  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
   <a class="backicon" title="Back to The Bootleggers List" href="/" aria-label="back to the Bootleggers List"></a>
+  <a class="backtext nounderline" title="Back to The Bootleggers List" href="/">The Bootleggers List</a>
 </header>
 
 
@@ -400,7 +388,7 @@ header {
             src='/imgs/mozi-0-720.jpg'
             width='720'
             height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
+            sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": Drink in the making"
             srcset="/imgs/mozi-0-360.jpg 360w, /imgs/mozi-0-720.jpg 720w, /imgs/mozi-0-1080.jpg 1080w, /imgs/mozi-0-1440.jpg 1440w, /imgs/mozi-0-1800.jpg 1800w">
@@ -410,7 +398,7 @@ header {
             src='/imgs/mozi-1-720.jpg'
             width='720'
             height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
+            sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": The bar is hidden behind the bookshelf of a hair salon"
             srcset="/imgs/mozi-1-360.jpg 360w, /imgs/mozi-1-720.jpg 720w, /imgs/mozi-1-1080.jpg 1080w, /imgs/mozi-1-1440.jpg 1440w, /imgs/mozi-1-1800.jpg 1800w">
@@ -420,7 +408,7 @@ header {
             src='/imgs/mozi-2-720.jpg'
             width='720'
             height='404'
-            sizes="(min-width: 800px) 800px, 100vw"
+            sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": "
             srcset="/imgs/mozi-2-360.jpg 360w, /imgs/mozi-2-720.jpg 720w, /imgs/mozi-2-1080.jpg 1080w, /imgs/mozi-2-1440.jpg 1440w, /imgs/mozi-2-1800.jpg 1800w">
@@ -430,7 +418,7 @@ header {
             src='/imgs/mozi-3-720.jpg'
             width='720'
             height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
+            sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": "
             srcset="/imgs/mozi-3-360.jpg 360w, /imgs/mozi-3-720.jpg 720w, /imgs/mozi-3-1080.jpg 1080w, /imgs/mozi-3-1440.jpg 1440w, /imgs/mozi-3-1800.jpg 1800w">
@@ -440,13 +428,17 @@ header {
             src='/imgs/mozi-4-720.jpg'
             width='720'
             height='480'
-            sizes="(min-width: 800px) 800px, 100vw"
+            sizes="(min-width: 850px) 850px, 100vw"
             layout="responsive"
             alt=": "
             srcset="/imgs/mozi-4-360.jpg 360w, /imgs/mozi-4-720.jpg 720w, /imgs/mozi-4-1080.jpg 1080w, /imgs/mozi-4-1440.jpg 1440w, /imgs/mozi-4-1800.jpg 1800w">
           </amp-img>
         
       </amp-carousel>
+
+      <div id="tblldesc">
+        <p>The Top 10 Cocktail Bars in taipei:</p>
+      </div>
 
       <div id="frame">
         <div id="frametop">
@@ -457,18 +449,15 @@ header {
         </div>
       </div>
 
-      <div id="tblldesc">
-        <p>The Top 10 Cocktail Bars in taipei.</p>
-        <div id="award"></div>
-      </div>
+      <div id="award"></div>
 
       <div class="buttons">
         <div role="button"><a target="_blank" href="https://www.facebook.com/mozisalon/">Mozi on facebook</a></div>
         <div role="button"><a target="_blank" href="https://maps.google.com/?cid=171717436675106975">map</a></div>
-        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</div>
+        <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">show opening hours</div>
       </div>
 
-      <div id="hours" hidden [hidden]="pagestate.hidehours">
+      <div class="hours" hidden [hidden]="pagestate.hidehours">
         <table>
           <tbody>
             <tr><th>Monday</th><th>12:00 PM – 2:00 AM</th></tr>
@@ -483,7 +472,7 @@ header {
       </div>
 
       <h2>Review</h2>
-      <div id="content">
+      <div id="content" class="hideable">
         <div class="hidecontent" [class]="pagestate.hidecontent ? 'hidecontent' : ''">
           <h3>Mozi</h3>
           <p>Hidden behind “one of the bookshelves” in a hair salon, Mozi might trick you into believing that it’s just another speakeasy-style bar in town. But once you push through the “right door,” you’ll soon find yourself in a spacious bar with elegant lounge areas and a pub-like vibe. The crowd is young, the music is loud and people smoke inside…it makes you wonder, is this really the right place to get some kicking cocktails? Don’t worry, even with that punk look, Mozi’s bartenders are as professional and talented as you would expect from a classy cocktail bar. Let their creativity run wild and their sexy cocktails will open up all your senses. If you have time, we recommend you to come earlier and take a look at the food menu first – Mozi has some of the best bar food you can find in Taipei.</p>
@@ -512,7 +501,7 @@ header {
           src='/imgs/mozi-1-720.jpg'
           width='720'
           height='480'
-          sizes="(min-width: 800px) 800px, 100vw"
+          sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": The bar is hidden behind the bookshelf of a hair salon"
           srcset="/imgs/mozi-1-360.jpg 360w, /imgs/mozi-1-720.jpg 720w, /imgs/mozi-1-1080.jpg 1080w, /imgs/mozi-1-1440.jpg 1440w, /imgs/mozi-1-1800.jpg 1800w">
@@ -527,7 +516,7 @@ header {
           src='/imgs/mozi-2-720.jpg'
           width='720'
           height='404'
-          sizes="(min-width: 800px) 800px, 100vw"
+          sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": "
           srcset="/imgs/mozi-2-360.jpg 360w, /imgs/mozi-2-720.jpg 720w, /imgs/mozi-2-1080.jpg 1080w, /imgs/mozi-2-1440.jpg 1440w, /imgs/mozi-2-1800.jpg 1800w">
@@ -542,7 +531,7 @@ header {
           src='/imgs/mozi-3-720.jpg'
           width='720'
           height='480'
-          sizes="(min-width: 800px) 800px, 100vw"
+          sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": "
           srcset="/imgs/mozi-3-360.jpg 360w, /imgs/mozi-3-720.jpg 720w, /imgs/mozi-3-1080.jpg 1080w, /imgs/mozi-3-1440.jpg 1440w, /imgs/mozi-3-1800.jpg 1800w">
@@ -557,7 +546,7 @@ header {
           src='/imgs/mozi-4-720.jpg'
           width='720'
           height='480'
-          sizes="(min-width: 800px) 800px, 100vw"
+          sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt=": "
           srcset="/imgs/mozi-4-360.jpg 360w, /imgs/mozi-4-720.jpg 720w, /imgs/mozi-4-1080.jpg 1080w, /imgs/mozi-4-1440.jpg 1440w, /imgs/mozi-4-1800.jpg 1800w">
@@ -572,7 +561,7 @@ header {
           src='/imgs/mozi-0-720.jpg'
           width='720'
           height='480'
-          sizes="(min-width: 800px) 800px, 100vw"
+          sizes="(min-width: 850px) 850px, 100vw"
           layout="responsive"
           alt="Mozi: Drink in the making"
           srcset="/imgs/mozi-0-360.jpg 360w, /imgs/mozi-0-720.jpg 720w, /imgs/mozi-0-1080.jpg 1080w, /imgs/mozi-0-1440.jpg 1440w, /imgs/mozi-0-1800.jpg 1800w">
