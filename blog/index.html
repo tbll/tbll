@@ -25,7 +25,6 @@
 <meta name="theme-color" content="#151c22">
 
 
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
     <script type="application/ld+json">
@@ -321,15 +320,6 @@ ul {
 
 
 
-    <amp-state id="pagestate">
-      <script type="application/json">
-        {
-          "hidehours": true
-        }
-      </script>
-    </amp-state>
-
-
     <main>
 
       <div class="font_title font_centered head">
@@ -359,7 +349,7 @@ ul {
                 height='540'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sakoh-0-360.jpg 360w, /imgs/blog-sakoh-0-720.jpg 720w, /imgs/blog-sakoh-0-1080.jpg 1080w, /imgs/blog-sakoh-0-1440.jpg 1440w, /imgs/blog-sakoh-0-1800.jpg 1800w">
               </amp-img>
               
@@ -369,7 +359,7 @@ ul {
                 height='540'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sakoh-1-360.jpg 360w, /imgs/blog-sakoh-1-720.jpg 720w, /imgs/blog-sakoh-1-1080.jpg 1080w, /imgs/blog-sakoh-1-1440.jpg 1440w, /imgs/blog-sakoh-1-1800.jpg 1800w">
               </amp-img>
               
@@ -379,7 +369,7 @@ ul {
                 height='540'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sakoh-2-360.jpg 360w, /imgs/blog-sakoh-2-720.jpg 720w, /imgs/blog-sakoh-2-1080.jpg 1080w, /imgs/blog-sakoh-2-1440.jpg 1440w, /imgs/blog-sakoh-2-1800.jpg 1800w">
               </amp-img>
               
@@ -389,7 +379,7 @@ ul {
                 height='960'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sakoh-3-360.jpg 360w, /imgs/blog-sakoh-3-720.jpg 720w, /imgs/blog-sakoh-3-1080.jpg 1080w, /imgs/blog-sakoh-3-1440.jpg 1440w, /imgs/blog-sakoh-3-1800.jpg 1800w">
               </amp-img>
               
@@ -413,25 +403,7 @@ ul {
             <div class="buttons font_small">
               <a role="button" target="_blank" href="https://www.facebook.com/SAKOH-BAR-2014768678744582/">facebook</a>
               <a role="button" target="_blank" href="https://maps.google.com/?cid=2114424947517350116">Map</a>
-              
-              <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</div>
-              
             </div>
-            
-            <div class="hours font_content" hidden [hidden]="pagestate.hidehours">
-              <table>
-                <tbody>
-                  <tr><th>Monday</th><th>2:00 PM – 1:00 AM</th></tr>
-                  <tr><th>Tuesday</th><th>2:00 PM – 1:00 AM</th></tr>
-                  <tr><th>Wednesday</th><th>2:00 PM – 1:00 AM</th></tr>
-                  <tr><th>Thursday</th><th>2:00 PM – 1:00 AM</th></tr>
-                  <tr><th>Friday</th><th>2:00 PM – 2:00 AM</th></tr>
-                  <tr><th>Saturday</th><th>2:00 PM – 2:00 AM</th></tr>
-                  <tr><th>Sunday</th><th>2:00 PM – 1:00 AM</th></tr>
-                </tbody>
-              </table>
-            </div>
-            
             <div class="font_title"><p><a class="top10 underline" href="/">See our Top 10</a></p></div>
           </div>
         </div>
@@ -459,7 +431,7 @@ ul {
                 height='450'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sidebar-0-360.jpg 360w, /imgs/blog-sidebar-0-720.jpg 720w, /imgs/blog-sidebar-0-1080.jpg 1080w, /imgs/blog-sidebar-0-1440.jpg 1440w, /imgs/blog-sidebar-0-1800.jpg 1800w">
               </amp-img>
               
@@ -469,7 +441,7 @@ ul {
                 height='450'
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
-                alt=": "
+                alt=""
                 srcset="/imgs/blog-sidebar-1-360.jpg 360w, /imgs/blog-sidebar-1-720.jpg 720w, /imgs/blog-sidebar-1-1080.jpg 1080w, /imgs/blog-sidebar-1-1440.jpg 1440w, /imgs/blog-sidebar-1-1800.jpg 1800w">
               </amp-img>
               
@@ -489,25 +461,7 @@ ul {
             <div class="buttons font_small">
               <a role="button" target="_blank" href="https://www.facebook.com/sidebartpe/">facebook</a>
               <a role="button" target="_blank" href="https://maps.google.com/?cid=1612994488872423690">Map</a>
-              
-              <div role="button" aria-label="show hours" tabindex="0" on="tap:AMP.setState({pagestate: {hidehours: !pagestate.hidehours}})">Show opening hours</div>
-              
             </div>
-            
-            <div class="hours font_content" hidden [hidden]="pagestate.hidehours">
-              <table>
-                <tbody>
-                  <tr><th>Monday</th><th>10:30 AM – 1:00 AM</th></tr>
-                  <tr><th>Tuesday</th><th>10:30 AM – 7:30 PM</th></tr>
-                  <tr><th>Wednesday</th><th>10:30 AM – 1:00 AM</th></tr>
-                  <tr><th>Thursday</th><th>10:30 AM – 1:00 AM</th></tr>
-                  <tr><th>Friday</th><th>10:30 AM – 2:00 AM</th></tr>
-                  <tr><th>Saturday</th><th>10:30 AM – 2:00 AM</th></tr>
-                  <tr><th>Sunday</th><th>7:00 PM – 1:00 AM</th></tr>
-                </tbody>
-              </table>
-            </div>
-            
             <div class="font_title"><p><a class="top10 underline" href="/">See our Top 10</a></p></div>
           </div>
         </div>
