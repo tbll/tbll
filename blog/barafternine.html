@@ -294,6 +294,10 @@ ul {
   }
 }
 
+.post.layout_article .postcontent {
+  flex-flow: column;
+}
+
 .content {
   flex-basis: 100%;
 }
@@ -387,7 +391,7 @@ ul {
         <p><a class="top10 underline" href="/">★★★ See our Top 10 ★★★</a></p>
       </div>
 
-      <div class="post">
+      <div class="post layout_short">
 
         <h1 class="font_title font_centered">Bar After Nine: the epitome of average</h1>
 
@@ -401,12 +405,14 @@ ul {
               layout="responsive"
               loop
               controls
+              
               type="slides">
               
               <amp-img
                 src='/imgs/blog-barafternine-0-720.jpg'
                 width='720'
                 height='540'
+                
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
                 alt="Bar After Nine: the epitome of average"
@@ -417,6 +423,7 @@ ul {
                 src='/imgs/blog-barafternine-1-720.jpg'
                 width='720'
                 height='960'
+                
                 sizes="(min-width: 850px) 425px, 100vw"
                 layout="responsive"
                 alt="Bar After Nine: the epitome of average"
