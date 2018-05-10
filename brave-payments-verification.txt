@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: thebootleggerslist.com
+Token: e675935c3c19720d183feced3cc9ea192f723d1cbc065c33baab9883333511f3 
